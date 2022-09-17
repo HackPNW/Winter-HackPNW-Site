@@ -47,16 +47,35 @@
       </div>
 
     </div>
-    <div class="flex p-8" ref="faqSectionEl">
-      <div class="flex flex-col" v-for="col in faqCols">
-        <div class="" v-for="faq in col">
-          <details class="cursor-pointer p-4 bg-gray-300 rounded-md">
-            <summary class="text-xl font-bold">
-              {{ faq[0] }}
-            </summary>
-            <p class="pt-2 text-md">{{ faq[1] }}</p>
-          </details>
+
+    <div class="p-8">
+
+      <h2 class="text-center text-6xl font-semibold pb-6">Frequenty Asked Questions</h2>
+
+      <div class="flex gap-x-4 mb-6" ref="faqSectionEl">
+        <div class="flex flex-col flex-1 gap-y-4" v-for="col in faqCols">
+          <div class="" v-for="faq in col">
+            <details class="cursor-pointer p-4 bg-gray-300 rounded-md">
+              <summary class="text-xl font-bold">
+                {{ faq[0] }}
+              </summary>
+              <p class="pt-2 text-md">{{ faq[1] }}</p>
+            </details>
+          </div>
         </div>
+      </div>
+
+      <div class="p-4 rounded-lg bg-gray-300 flex flex-col"> 
+        <h3 class="text-4xl pb-2">Still have questions?  We got you.</h3>
+        <p class="text-lg text-gray-600">Email</p>
+        <input class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-2" placeholder="example@example.com">
+
+        <p class="text-lg text-gray-600">Message</p>
+        <textarea class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-4" rows="8" placeholder="Hey there..." />
+
+        <button class="bg-red-500 rounded-md text-lg px-2 py-1 outline-0 text-white font-semibold">
+          Send
+        </button>
       </div>
     </div>
     
@@ -72,7 +91,7 @@
 </style>
 
 <script setup>
-  import { ref, computed, watch } from "vue";
+  import { ref, computed, watch, onMounted } from "vue";
   import { useElementSize } from "@vueuse/core";
   import NavBar from "../components/NavBar.vue";
 
@@ -85,15 +104,37 @@
     ["Will I buy hackpnw.org before Equinox?", "Yes. Pellentesque in nibh ut magna pretium dictum et nec quam. Aliquam non est eu odio tincidunt lobortis. Proin eu mollis metus. Praesent enim neque, ornare a cursus sit amet, imperdiet non nibh. Ut non rhoncus est. Mauris non mattis elit. Nullam vel molestie felis, at laoreet turpis. Aenean tempus pellentesque porttitor."],
     ["What is among s?", "Pellentesque in nibh ut magna pretium dictum et nec quam. Aliquam non est eu odio tincidunt lobortis. Proin eu mollis metus. Praesent enim neque, ornare a cursus sit amet, imperdiet non nibh. Ut non rhoncus est. Mauris non mattis elit. Nullam vel molestie felis, at laoreet turpis. Aenean tempus pellentesque porttitor."],
   ]);
-  const faqCols = computed(() => {
-    let ret = [];
+  const faqCols = ref([[]]);
+  
+  const doTheFuckinCols = () => {
+    const cols = faqSectionColumnsCount.value;
+    let ret = [...new Array(cols)].map(() => []);
+
+    for (let i = 0; i < faqsData.value.length; i++) {
+      ret[i % cols].push(faqsData.value[i])
+    }
+
+    console.log(ret);
     
-  });
-  const faqSectionColumnsCount = ref(2);
+    faqCols.value = ret;
+  }
+
+  const faqSectionColumnsCount = ref(1);
 
   watch(faqSectionWidth, (newVal, oldVal) => {
     console.debug(`✨ FAQ section width change: ${oldVal} -> ${newVal}`);
-    faqSectionColumnsCount.value = Math.floor(newVal / 320) || 1;
+
+    // TODO: I know this code is fucking horrible, im too tired to fix, refactor pls
+
+    let newFaqSectionColumnsCount = Math.floor(newVal / 400) || 1;
+    let needToFuckinDoCols = newFaqSectionColumnsCount == faqSectionColumnsCount.value;
+    faqSectionColumnsCount.value = newFaqSectionColumnsCount;
+    if (needToFuckinDoCols) doTheFuckinCols();
     console.debug(faqSectionColumnsCount.value);
   });
+
+  onMounted(() => {
+    faqSectionColumnsCount.value = Math.floor(faqSectionWidth.value / 400) || 1;
+    doTheFuckinCols();
+  })
 </script>
