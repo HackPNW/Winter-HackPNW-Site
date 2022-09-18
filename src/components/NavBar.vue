@@ -68,11 +68,16 @@
   .link-underline {
 		border-bottom-width: 0;
 		background-image: linear-gradient(transparent, transparent), linear-gradient(rgb(239 68 68), rgb(239 68 68));
-		background-size: 0px 3px;
+		background-size: 0 3px;
 		background-position: 0 100%;
 		background-repeat: no-repeat;
 		transition: background-size .1s ease-in-out;
 	}
+	.link-underline:hover {
+		background-size: 100% 3px;
+		background-position: 0 100%
+	}
+
 </style>
 
 <script setup>
