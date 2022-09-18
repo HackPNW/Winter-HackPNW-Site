@@ -29,13 +29,13 @@
             </div>
             <div class="hidden sm:ml-10 md:ml-16 sm:block right-0">
               <div class="flex space-x-4 md:space-x-10">
-                <a href="#" class="text-black px-3 py-2 rounded-md text-sm font-medium" aria-current="page">HOME</a>
+                <a href="#" class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium" aria-current="page">HOME</a>
 
-                <a href="#" class="text-black px-3 py-2 rounded-md text-sm font-medium">ABOUT</a>
+                <a href="#" class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium">ABOUT</a>
 
-                <a href="#" class="text-black px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
+                <a href="#" class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
 
-                <a href="#" class="text-black px-3 py-2 rounded-md text-sm font-medium">SPONSORS</a>
+                <a href="#" class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium">SPONSORS</a>
               </div>
             </div>  
           </div>
@@ -63,6 +63,17 @@
     </div>
   </nav>
 </template>
+
+<style scoped>
+  .link-underline {
+		border-bottom-width: 0;
+		background-image: linear-gradient(transparent, transparent), linear-gradient(rgb(239 68 68), rgb(239 68 68));
+		background-size: 0px 3px;
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		transition: background-size .1s ease-in-out;
+	}
+</style>
 
 <script setup>
   import { ref } from "vue";
