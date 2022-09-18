@@ -13,7 +13,7 @@
           <image src="Orca2.png" class="w-96 h-96 absolute right-0 top-0 hidden lg:block z-[-1]" />
         </div>
         <div class="flex-grow">
-          <button class="mt-8 rounded-full bg-red-500 py-3 px-10 text-white font-bold text-xl w-fit">Register</button>
+          <button class="mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-10 text-white font-bold text-xl w-fit">Register</button>
         </div>
       </div>
 
@@ -24,25 +24,35 @@
             What is HackPNW?
             <div class="absolute bg-red-500 h-4 w-full -mt-3 ml-5 z-[-1]" />
           </h1>
-          <p class="text-lg px-2 font-semibold">
+          <p class="text-lg px-2 my-4 font-semibold">
             HackPNW is a 36 hour highschool hackathon <a href="https://reactor-ext.azurewebsites.net/en-us/reactor/Location/Redmond" class="font-bold text-red-500 hover:cursor-pointer hover:bg-slate-200 hover:rounded-lg"> @Microsoft Reactor, Redmond Washington.</a> We encourage highschool students from around the Pacific Northwest to come and compete for fortune and glory!
             There will be code, There will be prizes, and most of all there will be lots of fun! Best of all it's entirely free (including food)!    
           </p>
+          <div class="w-full my-6 text-center">
+            <button class="rounded-full bg-red-500 hover:bg-red-400 py-2 px-5 text-white font-bold text-xl">Register</button>
+          </div>
         </div>
         <div class="border-black border-r-4 p-2 flex-1">
           <h1 class="font-bold text-5xl z-20 relative w-fit pb-4">Who are we?
             <div class="absolute bg-amber-500 h-4 w-full -mt-3 ml-5 z-[-1]" />
           </h1>
-          <p class="text-lg px-2 font-semibold">
+          <p class="text-lg px-2 mt-4 font-semibold">
             Our mission is to bring together highschool students from all over the region for a weekend-long hackathon that's as fun as it is educational. We want to help students from different schools and backgrounds form cross-campus connections, learn from each other, and build their skillset with real world experience.
           </p>
+          <div class="w-full mt-6 text-center">
+            <button class="rounded-full bg-amber-500 hover:bg-amber-400 py-2 px-5 text-white font-bold text-xl">Contact Us</button>
+          </div>
         </div>
         <div class="p-2 flex-1">
-          <h1 class="font-bold text-5xl z-20 relative w-fit pb-4">When is it?
+          <h1 class="font-bold text-5xl z-20 relative w-fit pb-4">Details!
             <div class="absolute bg-green-500 h-4 w-full -mt-3 ml-5 z-[-1]" />
           </h1>
-          <p class="text-lg px-2 font-semibold">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in elit urna. Pellentesque fringilla gravida ipsum sit amet semper. Proin placerat pharetra urna, vitae imperdiet lacus. In hac habitasse platea dictumst. Pellentesque vel vehicula metus, sed mollis est. Nullam augue diam, ullamcorper ut lobortis a, posuere at justo. Vestibulum sed ipsum nec tortor dignissim pharetra et malesuada augue. Morbi luctus metus dignissim rhoncus rhoncus. <br> <br> </p>
+          <p class="text-lg px-2 my-4 font-semibold">
+            When: January 7th-8th <br>
+            Where: 3709 157th Ave NE, Redmond, WA 98052 <br>
+            Who can register: Any highschool student <br>
+            Why: It's fun!
+          </p>
         </div>
       </div>
 
@@ -50,7 +60,7 @@
 
     <div class="p-8">
 
-      <h2 class="text-center text-6xl font-semibold pb-6">Frequenty Asked Questions</h2>
+      <h2 class="text-center text-6xl font-semibold pb-6 pt-4 my-5">Frequenty Asked Questions</h2>
 
       <div class="flex gap-x-4 mb-6" ref="faqSectionEl">
         <div class="flex flex-col flex-1 gap-y-4" v-for="col in faqCols">
@@ -77,12 +87,13 @@
           Send
         </button>
       </div>
-    </div>
-    
+    </div>    
   </div>
 </template>
 
 <style scoped>
+
+
 </style>
 
 <script setup>
