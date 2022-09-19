@@ -13,34 +13,82 @@
           >
             <span class="sr-only">Open main menu</span>
 
-            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <svg
+              class="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
             </svg>
 
-            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <svg
+              class="hidden h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+        <div
+          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between"
+        >
           <div class="flex">
             <div class="flex flex-shrink-0">
               <h1 class="text-3xl text-black font-bold">HackPNW</h1>
             </div>
             <div class="hidden sm:ml-10 md:ml-16 sm:block right-0">
               <div class="flex space-x-4 md:space-x-10">
-                <a href="#" class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium" aria-current="page">HOME</a>
+                <a
+                  href="#"
+                  class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium"
+                  aria-current="page"
+                  >HOME</a
+                >
 
-                <a href="#" class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium">ABOUT</a>
+                <a
+                  href="#"
+                  class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium"
+                  >ABOUT</a
+                >
 
-                <a href="#" class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
+                <a
+                  href="#"
+                  class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium"
+                  >FAQ</a
+                >
 
-                <a href="#" class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium">SPONSORS</a>
+                <a
+                  href="#"
+                  class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium"
+                  >SPONSORS</a
+                >
               </div>
-            </div>  
+            </div>
           </div>
           <div class="flex hidden sm:inline align-middle">
-            <button href="#" class="bg-red-500 text-white font-semibold hover:bg-red-400 hover:text-white px-4 py-2 rounded-full text-sm">REGISTER</button>
+            <button
+              href="#"
+              class="bg-red-500 text-white font-semibold hover:bg-red-400 hover:text-white px-4 py-2 rounded-full text-sm"
+            >
+              REGISTER
+            </button>
           </div>
         </div>
       </div>
@@ -50,40 +98,63 @@
     <div class="sm:hidden" id="mobile-menu" v-show="mobileMenuOpen">
       <div class="space-y-1 px-2 pt-2 pb-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="#" class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
+        <a
+          href="#"
+          class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          aria-current="page"
+          >Home</a
+        >
 
-        <a href="#" class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+        <a
+          href="#"
+          class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          >About</a
+        >
 
-        <a href="#" class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
+        <a
+          href="#"
+          class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          >FAQ</a
+        >
 
-        <a href="#" class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sponsors</a>
+        <a
+          href="#"
+          class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          >Sponsors</a
+        >
 
-        <a href="#" class="text-white bg-red-500 hover:bg-red-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Register</a>
+        <a
+          href="#"
+          class="text-white bg-red-500 hover:bg-red-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          >Register</a
+        >
       </div>
     </div>
   </nav>
 </template>
 
 <style scoped>
-  .link-underline {
-		border-bottom-width: 0;
-		background-image: linear-gradient(transparent, transparent), linear-gradient(rgb(239 68 68), rgb(239 68 68));
-		background-size: 0 3px;
-		background-position: 0 100%;
-		background-repeat: no-repeat;
-		transition: background-size .1s ease-in-out;
-	}
-	.link-underline:hover {
-		background-size: 100% 3px;
-		background-position: 0 100%
-	}
-
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(rgb(239 68 68), rgb(239 68 68));
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.1s ease-in-out;
+}
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
 </style>
 
 <script setup>
-  import { ref } from "vue";
+import { ref } from "vue"
 
-  const mobileMenuOpen = ref(false);
-  const toggleMobileMenu = () => {mobileMenuOpen.value = !mobileMenuOpen.value;  console.log(mobileMenuOpen.value)};
-
+const mobileMenuOpen = ref(false)
+const toggleMobileMenu = () => {
+  mobileMenuOpen.value = !mobileMenuOpen.value
+  console.log(mobileMenuOpen.value)
+}
 </script>

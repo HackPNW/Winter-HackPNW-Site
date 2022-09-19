@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{html,js,vue}"],
   theme: {
     fontFamily: {
-      'poppins': ['Poppins', 'sans-serif']
+      poppins: ["Poppins", "sans-serif"],
     },
     extend: {},
   },
