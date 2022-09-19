@@ -9,14 +9,6 @@
     </h1>
 
     <slot />
-
-    <!-- <p class="text-lg px-2 my-4 font-semibold">
-      {{ text }}
-    </p> -->
-    <!-- <div class="w-full my-6 text-center">
-      <button v-if="hasButton && color === 'red'" class="rounded-full bg-red-500 hover:bg-red-400 py-2 px-5 text-white font-bold text-xl"> {{ buttonText }}</button>
-      <button v-else-if="hasButton && color === 'amber'" class="rounded-full bg-amber-500 hover:bg-amber-400 py-2 px-5 text-white font-bold text-xl"> {{ buttonText }}</button>
-    </div> -->
   </div>
 </template>
 

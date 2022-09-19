@@ -16,7 +16,7 @@
           </p>
           <div class="w-full my-6 text-center">
             <button
-              class="rounded-full bg-red-500 hover:red-400 py-2 px-5 text-white font-bold text-xl"
+              class="rounded-full bg-red-500 hover:bg-red-400 py-2 px-5 text-white font-bold text-xl"
             >
               Register
             </button>
@@ -33,7 +33,7 @@
           </p>
           <div class="w-full my-6 text-center">
             <button
-              class="rounded-full bg-amber-500 hover:amber-400 py-2 px-5 text-white font-bold text-xl"
+              class="rounded-full bg-amber-500 hover:bg-amber-400 py-2 px-5 text-white font-bold text-xl"
             >
               Contact Us
             </button>
