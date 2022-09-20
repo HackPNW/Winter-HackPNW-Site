@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-1 flex-col md:flex-row">
-        <content-card title="What is HackPNW?" color="red-500">
+    <div class="flex flex-1 flex-col lg:flex-row">
+        <content-card title="What is HackPNW?" color="red-500" class="border-b-4 lg:border-b-0">
           <p class="text-lg px-2 my-4 font-semibold">
             HackPNW is a 36 hour highschool hackathon
             <a
@@ -23,7 +23,7 @@
           </div>
         </content-card>
 
-        <content-card title="Who are we?" color="amber-500">
+        <content-card title="Who are we?" color="amber-500" class="lg:border-l-4 border-b-4 lg:border-b-0">
           <p class="text-lg px-2 my-4 font-semibold">
             Our mission is to bring together highschool students from all over
             the region for a weekend-long hackathon that's as fun as it is
@@ -40,7 +40,7 @@
           </div>
         </content-card>
 
-        <content-card title="Details!" color="green-500">
+        <content-card title="Details!" color="green-500" class="lg:border-l-4">
           <p class="text-lg px-2 my-4 font-semibold">
             When: January 7th-8th <br>
             Where: 3709 157th Ave NE, Redmond, WA 98052 <br>

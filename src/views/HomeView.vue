@@ -18,7 +18,7 @@
           </h1>
           <image
             src="Orca.png"
-            class="absolute w-[50rem] right-0 -top-[13rem] hidden xl:block z-[-10]"
+            class="absolute w-[50rem] right-0 -top-[13rem] hidden 2xl:block z-[-10]"
           />
         </div>
         <div class="flex-grow">
