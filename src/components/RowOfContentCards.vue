@@ -40,7 +40,7 @@
           </div>
         </content-card>
 
-        <content-card title="Details" color="green-500">
+        <content-card title="Details!" color="green-500">
           <p class="text-lg px-2 my-4 font-semibold">
             When: January 7th-8th <br>
             Where: 3709 157th Ave NE, Redmond, WA 98052 <br>
