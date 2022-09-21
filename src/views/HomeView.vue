@@ -18,6 +18,7 @@
           </h1>
           <image
             src="Orca.png"
+            alt="An Orca using a laptop"
             class="absolute w-[50rem] right-0 -top-[13rem] hidden 2xl:block z-[-10]"
           />
         </div>
