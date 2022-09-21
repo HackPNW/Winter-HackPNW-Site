@@ -150,11 +150,11 @@
 </style>
 
 <script setup>
-import { ref } from "vue"
+import { ref } from "vue";
 
-const mobileMenuOpen = ref(false)
+const mobileMenuOpen = ref(false);
 const toggleMobileMenu = () => {
-  mobileMenuOpen.value = !mobileMenuOpen.value
-  console.log(mobileMenuOpen.value)
-}
+  mobileMenuOpen.value = !mobileMenuOpen.value;
+  console.log(mobileMenuOpen.value);
+};
 </script>

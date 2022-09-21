@@ -11,5 +11,5 @@
 defineProps({
   question: String,
   answer: String,
-})
+});
 </script>

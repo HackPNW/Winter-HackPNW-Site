@@ -16,5 +16,5 @@
 defineProps({
   title: String,
   color: String, // TailwindCSS color
-})
+});
 </script>
