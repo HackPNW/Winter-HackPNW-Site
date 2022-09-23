@@ -8,7 +8,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  safelist: [
-    "bg-green-500"
-  ]
-}
+  safelist: ["bg-green-500"],
+};

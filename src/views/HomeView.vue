@@ -18,6 +18,7 @@
           </h1>
           <image
             src="Orca.png"
+            alt="An Orca using a laptop"
             class="absolute w-[50rem] right-0 -top-[13rem] hidden 2xl:block z-[-10]"
           />
         </div>
@@ -48,19 +49,22 @@
 
       <div class="flex flex-col lg:flex-row gap-x-2 mb-4">
         <div class="flex flex-col flex-1 gap-y-2 mb-2">
-          <f-a-q-card v-for="faq in faqsData" 
+          <f-a-q-card
+            v-for="faq in faqsData"
             :question="faq[0]"
             :answer="faq[1]"
           />
         </div>
         <div class="flex flex-col flex-1 gap-y-2 mb-2">
-          <f-a-q-card v-for="faq in faqsData2" 
+          <f-a-q-card
+            v-for="faq in faqsData2"
             :question="faq[0]"
             :answer="faq[1]"
           />
         </div>
         <div class="flex flex-col flex-1 gap-y-2 mb-2">
-          <f-a-q-card v-for="faq in faqsData3" 
+          <f-a-q-card
+            v-for="faq in faqsData3"
             :question="faq[0]"
             :answer="faq[1]"
           />
@@ -95,16 +99,16 @@
 <style scoped></style>
 
 <script setup>
-import { ref, computed, watch, onMounted } from "vue"
-import { useElementSize } from "@vueuse/core"
-import NavBar from "../components/NavBar.vue"
-import ContentCard from "../components/ContentCard.vue"
-import FAQCard from "../components/FAQCard.vue"
-import RowOfContentCards from "../components/RowOfContentCards.vue"
+import { ref, computed, watch, onMounted } from "vue";
+import { useElementSize } from "@vueuse/core";
+import NavBar from "../components/NavBar.vue";
+import ContentCard from "../components/ContentCard.vue";
+import FAQCard from "../components/FAQCard.vue";
+import RowOfContentCards from "../components/RowOfContentCards.vue";
 
-const faqSectionEl = ref(null)
+const faqSectionEl = ref(null);
 const { width: faqSectionWidth, height: faqSectionHeight } =
-  useElementSize(faqSectionEl)
+  useElementSize(faqSectionEl);
 
 const faqsData = ref([
   [
@@ -123,7 +127,7 @@ const faqsData = ref([
     "How big are the teams?",
     "Teams should be 2-4 people, you can register alone or with a team.",
   ],
-])
+]);
 
 const faqsData2 = ref([
   [
@@ -142,7 +146,7 @@ const faqsData2 = ref([
     "What should I bring?",
     "We recomend you bring a laptop, charger(s) for all your devices, and if you plan on spending the night (which we recomend) bring a sleeping bag and other toiletries you might need. Most of all bring a positive mindset and good energy and you'll have a great time!",
   ],
-])
+]);
 
 const faqsData3 = ref([
   [
@@ -161,5 +165,5 @@ const faqsData3 = ref([
     "Will there be tech talks and workshops?",
     "Yes, representatives from many companies will be there to give talks and workshops about their latest tech!",
   ],
-])
+]);
 </script>
