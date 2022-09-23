@@ -34,7 +34,7 @@
     </div>
 
     <div class="p-8">
-      <h2 class="text-center text-6xl font-semibold pb-6 pt-4 my-5">
+      <h2 class="text-center text-6xl font-semibold pb-6 pt-4 my-5 underline decoration-red-500 decoration-8 underline-offset-8">
         Frequenty Asked Questions
       </h2>
 
@@ -68,7 +68,7 @@
       </div>
 
       <details class="p-4 rounded-lg bg-gray-300">
-          <summary class="text-4xl pb-2 cursor-pointer">Still have questions? Send us a message!</summary>
+          <summary class="text-2xl pb-2 cursor-pointer">Still have questions? Send us a message!</summary>
         <div class="flex flex-col">
           <p class="text-lg text-gray-600">Email</p>
           <input
