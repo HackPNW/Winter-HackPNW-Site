@@ -35,7 +35,7 @@
     </div>
 
     <div class="p-8">
-      <h2 class="text-center text-6xl font-semibold pb-6 pt-4 my-5 underline decoration-red-500 decoration-8 underline-offset-8">
+      <h2 class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-red-500 decoration-8 underline-offset-8">
         Frequenty Asked Questions
       </h2>
 
@@ -70,29 +70,14 @@
           />
         </div>
       </div>
-
-      <details class="p-4 rounded-lg bg-gray-300">
-          <summary class="text-2xl pb-2 cursor-pointer">Still have questions? Send us a message!</summary>
-        <div class="flex flex-col">
-          <p class="text-lg text-gray-600">Email</p>
-          <input
-            class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-2"
-            placeholder="example@example.com"
-          />
-          <p class="text-lg text-gray-600">Message</p>
-          <textarea
-            class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-4"
-            rows="8"
-            placeholder="Hey there..."
-          />
-          <button
-            class="bg-red-500 rounded-md text-lg px-2 py-1 outline-0 text-white font-semibold"
-          >
-            Send
-          </button>
-        </div>
-      </details>
+      <more-question-box />
     </div>
+    <div class="h-screen">
+      <h2 class="text-center text-6xl font-semibold pb-6 pt-4 my-5 underline decoration-amber-500 decoration-8 underline-offset-8">
+        Sponsors
+      </h2>
+    </div>
+    <based-footer />
   </div>
 </template>
 
@@ -105,6 +90,8 @@ import NavBar from "../components/NavBar.vue";
 import ContentCard from "../components/ContentCard.vue";
 import FAQCard from "../components/FAQCard.vue";
 import RowOfContentCards from "../components/RowOfContentCards.vue";
+import MoreQuestionBox from "../components/MoreQuestionBox.vue";
+import BasedFooter from "../components/BasedFooter.vue"
 
 const faqSectionEl = ref(null);
 const { width: faqSectionWidth, height: faqSectionHeight } =
