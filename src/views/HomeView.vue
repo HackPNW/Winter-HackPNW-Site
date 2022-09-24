@@ -35,7 +35,9 @@
     </div>
 
     <div id="faq" class="p-8">
-      <h2 class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-red-500 decoration-8 underline-offset-8">
+      <h2
+        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-red-500 decoration-8 underline-offset-8"
+      >
         Frequenty Asked Questions
       </h2>
 
@@ -73,7 +75,9 @@
       <more-question-box />
     </div>
     <div id="sponsors" class="h-screen">
-      <h2 class="text-center text-6xl font-semibold pb-6 pt-4 my-5 underline decoration-amber-500 decoration-8 underline-offset-8">
+      <h2
+        class="text-center text-6xl font-semibold pb-6 pt-4 my-5 underline decoration-amber-500 decoration-8 underline-offset-8"
+      >
         Sponsors
       </h2>
     </div>
@@ -91,7 +95,7 @@ import ContentCard from "../components/ContentCard.vue";
 import FAQCard from "../components/FAQCard.vue";
 import RowOfContentCards from "../components/RowOfContentCards.vue";
 import MoreQuestionBox from "../components/MoreQuestionBox.vue";
-import BasedFooter from "../components/BasedFooter.vue"
+import BasedFooter from "../components/BasedFooter.vue";
 
 const faqSectionEl = ref(null);
 const { width: faqSectionWidth, height: faqSectionHeight } =
