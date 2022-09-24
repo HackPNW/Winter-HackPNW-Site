@@ -42,7 +42,7 @@
     }
 </style>
 
-<script>
-    import { ref, computed, watch, onMounted } from "vue"
-    const isActive = ref(false);
+<script setup>
+import { ref, computed, watch, onMounted } from "vue"
+const isActive = ref(false);
 </script>
