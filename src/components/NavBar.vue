@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-[#FFFDF9] py-3">
+  <nav class="bg-[#FFFDF9] py-3 scroll-smooth">
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -63,19 +63,19 @@
                 >
 
                 <a
-                  href="#"
+                  href="#about"
                   class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium"
                   >ABOUT</a
                 >
 
                 <a
-                  href="#"
+                  href="#faq"
                   class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium"
                   >FAQ</a
                 >
 
                 <a
-                  href="#"
+                  href="#sponsors"
                   class="link-underline text-black px-3 py-2 rounded-md text-sm font-medium"
                   >SPONSORS</a
                 >

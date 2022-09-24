@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen scroll-smooth">
     <!-- Moved background color to style.css -->
     <nav-bar />
     <div class="h-full border-4 mx-6 border-black">
@@ -22,7 +22,7 @@
             class="absolute w-[50rem] right-0 -top-[13rem] hidden 2xl:block z-[-10]"
           />
         </div>
-        <div class="flex-grow">
+        <div class="flex-grow" id="about">
           <button
             class="mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-10 text-white font-bold text-xl w-fit"
           >
@@ -34,7 +34,7 @@
       <row-of-content-cards />
     </div>
 
-    <div class="p-8">
+    <div id="faq" class="p-8">
       <h2 class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-red-500 decoration-8 underline-offset-8">
         Frequenty Asked Questions
       </h2>
@@ -72,7 +72,7 @@
       </div>
       <more-question-box />
     </div>
-    <div class="h-screen">
+    <div id="sponsors" class="h-screen">
       <h2 class="text-center text-6xl font-semibold pb-6 pt-4 my-5 underline decoration-amber-500 decoration-8 underline-offset-8">
         Sponsors
       </h2>
