@@ -106,19 +106,19 @@
         >
 
         <a
-          href="#"
+          href="#about"
           class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >About</a
         >
 
         <a
-          href="#"
+          href="#faq"
           class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >FAQ</a
         >
 
         <a
-          href="#"
+          href="#sponsors"
           class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >Sponsors</a
         >
