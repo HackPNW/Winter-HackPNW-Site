@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-screen scroll-smooth">
-    <!-- Moved background color to style.css -->
     <nav-bar />
     <div class="h-full border-4 mx-6 border-black">
       <div
@@ -25,6 +24,7 @@
         <div class="flex-grow" id="about">
           <button
             class="mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-10 text-white font-bold text-xl w-fit"
+            @click="goToRegistration"
           >
             Register
           </button>
@@ -85,10 +85,9 @@
   </div>
 </template>
 
-<style scoped></style>
-
 <script setup>
 import { ref, computed, watch, onMounted } from "vue";
+import { useRouter } from "vue-router";
 import { useElementSize } from "@vueuse/core";
 import NavBar from "../components/NavBar.vue";
 import ContentCard from "../components/ContentCard.vue";
@@ -97,11 +96,15 @@ import RowOfContentCards from "../components/RowOfContentCards.vue";
 import MoreQuestionBox from "../components/MoreQuestionBox.vue";
 import BasedFooter from "../components/BasedFooter.vue";
 
+const router = useRouter();
+
 const faqSectionEl = ref(null);
 const { width: faqSectionWidth, height: faqSectionHeight } =
   useElementSize(faqSectionEl);
 
-const goToRegistration = () => {};
+const goToRegistration = () => {
+  router.push("/register");
+};
 
 const faqsData = ref([
   [

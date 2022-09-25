@@ -84,7 +84,7 @@
           </div>
           <div class="flex hidden sm:inline align-middle">
             <button
-              href="#"
+                @click="goToRegistration"
               class="bg-red-500 text-white font-semibold hover:bg-red-400 hover:text-white px-4 py-2 rounded-full text-sm"
             >
               REGISTER
@@ -123,10 +123,10 @@
           >Sponsors</a
         >
 
-        <a
-          href="#"
+        <router-link
+          to="/register"
           class="text-white bg-red-500 hover:bg-red-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Register</a
+          >Register</router-link
         >
       </div>
     </div>
@@ -151,6 +151,13 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const goToRegistration = () => {
+  router.push("/register");
+};
 
 const mobileMenuOpen = ref(false);
 const toggleMobileMenu = () => {
