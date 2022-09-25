@@ -84,7 +84,7 @@
           </div>
           <div class="flex hidden sm:inline align-middle">
             <button
-                @click="goToRegistration"
+              @click="goToRegistration"
               class="bg-red-500 text-white font-semibold hover:bg-red-400 hover:text-white px-4 py-2 rounded-full text-sm"
             >
               REGISTER
