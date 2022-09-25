@@ -5,7 +5,7 @@
     <div class="h-full border-4 mx-6 border-black">
       <div
         class="flex flex-col justify-between border-b-4 border-black p-4 sm:p-10"
-        style="min-height: calc(100vh - 190px)"
+        style="min-height: calc(100vh - 165px)"
       >
         <div class="flex-grow"></div>
         <div class="relative">
