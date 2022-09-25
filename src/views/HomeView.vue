@@ -38,7 +38,7 @@
       <h2
         class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-red-500 decoration-8 underline-offset-8"
       >
-        Frequenty Asked Questions
+        Frequently Asked Questions
       </h2>
 
       <!-- <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 mb-6 items-start">
