@@ -101,6 +101,8 @@ const faqSectionEl = ref(null);
 const { width: faqSectionWidth, height: faqSectionHeight } =
   useElementSize(faqSectionEl);
 
+const goToRegistration = () => {};
+
 const faqsData = ref([
   [
     "What is a Hackathon?",
