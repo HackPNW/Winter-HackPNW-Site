@@ -6,11 +6,13 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
+    meta: { transition: "slide-left" },
   },
   {
     path: "/register",
     name: "registration",
     component: RegistrationView,
+    meta: { transition: "slide-right" },
   },
 ];
 
