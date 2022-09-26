@@ -50,26 +50,8 @@
       </div> -->
 
       <div class="flex flex-col lg:flex-row gap-x-2 mb-4">
-        <div class="flex flex-col flex-1 gap-y-2 mb-2">
-          <f-a-q-card
-            v-for="faq in faqsData"
-            :question="faq[0]"
-            :answer="faq[1]"
-          />
-        </div>
-        <div class="flex flex-col flex-1 gap-y-2 mb-2">
-          <f-a-q-card
-            v-for="faq in faqsData2"
-            :question="faq[0]"
-            :answer="faq[1]"
-          />
-        </div>
-        <div class="flex flex-col flex-1 gap-y-2 mb-2">
-          <f-a-q-card
-            v-for="faq in faqsData3"
-            :question="faq[0]"
-            :answer="faq[1]"
-          />
+        <div class="flex flex-col flex-1 gap-y-2 mb-2" v-for="faqs in faqsData">
+          <f-a-q-card v-for="faq in faqs" :question="faq[0]" :answer="faq[1]" />
         </div>
       </div>
       <more-question-box />
@@ -95,6 +77,7 @@ import FAQCard from "../components/FAQCard.vue";
 import RowOfContentCards from "../components/RowOfContentCards.vue";
 import MoreQuestionBox from "../components/MoreQuestionBox.vue";
 import BasedFooter from "../components/BasedFooter.vue";
+import { getFaqColumns } from "../faqs";
 
 const router = useRouter();
 
@@ -102,64 +85,9 @@ const faqSectionEl = ref(null);
 const { width: faqSectionWidth, height: faqSectionHeight } =
   useElementSize(faqSectionEl);
 
+const faqsData = getFaqColumns(3);
+
 const goToRegistration = () => {
   router.push("/register");
 };
-
-const faqsData = ref([
-  [
-    "What is a Hackathon?",
-    "A hackathon is a sprint-like design event wherein computer programmers and others involved in software development, including graphic designers, interface designers, product managers, project managers, domain experts, and others collaborate intensively on software projects. The goal of a hackathon is to create functioning software or hardware by the end of the event. Hackathons tend to have a specific focus, which can include the programming language used, the operating system, an application, an API, or the subject and the demographic group of the programmers. In other cases, there is no restriction on the type of software being created or the design of the new system. ",
-  ],
-  [
-    "How much does it cost?",
-    "Nothing! HackPNW is 100% free including meals and sleeping arangments!",
-  ],
-  [
-    "Who can register?",
-    "Any highschool student can register as a solo or as a team!",
-  ],
-  [
-    "How big are the teams?",
-    "Teams should be 2-4 people, you can register alone or with a team.",
-  ],
-]);
-
-const faqsData2 = ref([
-  [
-    "How many events are there?",
-    "There is a main team challenge along with a side competition for comptetive programming. To break up the hacking, each day there will be one fun event!",
-  ],
-  [
-    "Will there be prizes?",
-    "Of course! There will be over $1000 worth of prizes to win and trust us when we say they will be worth your time.",
-  ],
-  [
-    "Can I sleep on the floor?",
-    "We 100% advise that you bring a sleeping bag to sleep on the floor with, but yes! Sleep away or hack all the way through, it's your choice!",
-  ],
-  [
-    "What should I bring?",
-    "We recomend you bring a laptop, charger(s) for all your devices, and if you plan on spending the night (which we recomend) bring a sleeping bag and other toiletries you might need. Most of all bring a positive mindset and good energy and you'll have a great time!",
-  ],
-]);
-
-const faqsData3 = ref([
-  [
-    "How long is HackPNW?",
-    "HackPNW is a 36 hour hackathon starting in the morning of saturday going all the way to sunday evening!",
-  ],
-  [
-    "How big is HackPNW?",
-    "Our venue has capacity for about 100 hackers, spots are limited and first come first serve.",
-  ],
-  [
-    "When is HackPNW?",
-    "HackPNW is going to be on January 7th - January 8th, at the Microsoft Redmond Reactor!",
-  ],
-  [
-    "Will there be tech talks and workshops?",
-    "Yes, representatives from many companies will be there to give talks and workshops about their latest tech!",
-  ],
-]);
 </script>
