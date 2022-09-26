@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col w-full px-8 py-4 items-center">
+  <div class="flex flex-col w-full px-2 md:px-8 py-4 items-center">
     <div
-      class="flex self-start items-center text-red-500 px-4 py-2 bg-gray-300 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
+      class="flex self-start items-center text-red-500 px-4 py-2 mb-4 bg-gray-300 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
       @click="goToRegistration"
     >
       <svg
