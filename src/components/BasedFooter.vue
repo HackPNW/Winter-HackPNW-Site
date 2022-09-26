@@ -26,7 +26,5 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-const goToRegistration = () => {
-  router.push("/register");
-};
+const goToRegistration = () => router.push("/register");
 </script>

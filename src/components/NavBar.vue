@@ -97,7 +97,6 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="sm:hidden" id="mobile-menu" v-show="mobileMenuOpen">
       <div class="space-y-1 px-2 pt-2 pb-3">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <a
           href="#"
           class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
@@ -155,13 +154,8 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-const goToRegistration = () => {
-  router.push("/register");
-};
+const goToRegistration = () => router.push("/register");
 
 const mobileMenuOpen = ref(false);
-const toggleMobileMenu = () => {
-  mobileMenuOpen.value = !mobileMenuOpen.value;
-  console.log(mobileMenuOpen.value);
-};
+const toggleMobileMenu = () => (mobileMenuOpen.value = !mobileMenuOpen.value);
 </script>

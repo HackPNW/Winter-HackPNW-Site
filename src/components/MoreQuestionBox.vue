@@ -62,6 +62,7 @@ details[open] div {
 </style>
 
 <script setup>
-import { ref, computed, watch, onMounted } from "vue";
+import { ref } from "vue";
+
 const isActive = ref(false);
 </script>

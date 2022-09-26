@@ -41,14 +41,6 @@
         Frequently Asked Questions
       </h2>
 
-      <!-- <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 mb-6 items-start">
-        <f-a-q-card
-          v-for="question in faqsData"
-          :question="question[0]"
-          :answer="question[1]"
-        />
-      </div> -->
-
       <div class="flex flex-col lg:flex-row gap-x-2 mb-4">
         <div class="flex flex-col flex-1 gap-y-2 mb-2" v-for="faqs in faqsData">
           <f-a-q-card v-for="faq in faqs" :question="faq[0]" :answer="faq[1]" />
@@ -68,11 +60,9 @@
 </template>
 
 <script setup>
-import { ref, computed, watch, onMounted } from "vue";
+// import { ref, computed, watch, onMounted } from "vue";
 import { useRouter } from "vue-router";
-import { useElementSize } from "@vueuse/core";
 import NavBar from "../components/NavBar.vue";
-import ContentCard from "../components/ContentCard.vue";
 import FAQCard from "../components/FAQCard.vue";
 import RowOfContentCards from "../components/RowOfContentCards.vue";
 import MoreQuestionBox from "../components/MoreQuestionBox.vue";
@@ -80,10 +70,6 @@ import BasedFooter from "../components/BasedFooter.vue";
 import { getFaqColumns } from "../faqs";
 
 const router = useRouter();
-
-const faqSectionEl = ref(null);
-const { width: faqSectionWidth, height: faqSectionHeight } =
-  useElementSize(faqSectionEl);
 
 const faqsData = getFaqColumns(3);
 

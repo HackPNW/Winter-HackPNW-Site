@@ -45,7 +45,7 @@ details[open] p {
 </style>
 
 <script setup>
-import { ref, computed, watch, onMounted } from "vue";
+import { ref } from "vue";
 
 defineProps({
   question: String,
