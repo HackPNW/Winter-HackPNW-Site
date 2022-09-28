@@ -42,6 +42,7 @@
 
 <script setup>
 import { useRouter } from "vue-router";
+import FormInput from "../components/FormInput.vue"
 
 const router = useRouter();
 
