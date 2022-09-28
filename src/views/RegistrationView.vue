@@ -20,18 +20,31 @@
       </svg>
       <h1 class="font-semibold text-lg">Back to home</h1>
     </div>
-    <h1 class="text-5xl font-bold font-poppins underline decoration-red-500 decoration-8 underline-offset-[12px]">Register</h1>
-  </div>
-  <div class="flex flex-col">
-    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+    <h1
+      class="text-5xl font-bold font-poppins underline decoration-red-500 decoration-8 underline-offset-[12px]"
+    >
+      Register
+    </h1>
+    <div class="">
+      <label class="text-gray-700 text-sm font-bold mb-2" for="username">
         First Name
-    </label>
-    <input class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="First Name">
-    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+      </label>
+      <input
+        class="shadow border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
+        id="name"
+        type="text"
+        placeholder="First Name"
+      />
+      <label class="text-gray-700 text-sm font-bold mb-2" for="username">
         First Name
-    </label>
-    <input class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Last Name">
-
+      </label>
+      <input
+        class="shadow border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
+        id="name"
+        type="text"
+        placeholder="Last Name"
+      />
+    </div>
   </div>
 </template>
 

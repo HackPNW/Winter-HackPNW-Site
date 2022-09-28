@@ -1,8 +1,9 @@
 <template>
-  <details class="select-none p-4 rounded-xl bg-red-500 shadow-xl">
+  <details class="select-none rounded-xl bg-white shadow-xl">
     <summary
       @click="isActive = !isActive"
-      class="decoration-0 justify-between text-white text-2xl pb-2 cursor-pointer font-bold"
+      :class="{ 'rounded-t-xl': isActive, 'rounded-xl': !isActive }"
+      class="decoration-0 justify-between p-6 text-white w-full h-full bg-red-500 text-2xl cursor-pointer font-bold"
     >
       Still have questions? Send us a message!
       <svg
@@ -21,20 +22,20 @@
         <polyline points="6 9 12 15 18 9"></polyline>
       </svg>
     </summary>
-    <div class="flex flex-col">
-      <p class="text-lg text-white font-semibold">Email</p>
+    <div class="flex flex-col p-4">
+      <p class="text-lg text-gray-800 font-semibold">Email</p>
       <input
         class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-2"
         placeholder="example@example.com"
       />
-      <p class="text-lg text-white font-semibold">Message</p>
+      <p class="text-lg text-gray-800 font-semibold">Message</p>
       <textarea
         class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-4"
         rows="2"
         placeholder="Hey there..."
       />
       <button
-        class="bg-slate-500 rounded-md text-lg px-2 py-1 outline-0 text-white font-bold"
+        class="transition bg-red-500 hover:bg-red-400 rounded-md text-lg px-2 py-1 outline-0 text-white font-bold"
       >
         Send
       </button>

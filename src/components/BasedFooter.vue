@@ -6,7 +6,7 @@
           <span class="mr-4">Register for free!</span>
           <button
             @click="goToRegistration"
-            class="rounded-full bg-red-500 hover:bg-red-400 py-2 px-5 text-white font-bold text-xl"
+            class="transition rounded-full bg-red-500 hover:bg-red-400 py-2 px-5 text-white font-bold text-xl"
           >
             Register
           </button>
