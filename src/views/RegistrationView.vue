@@ -25,25 +25,17 @@
     >
       Register
     </h1>
-    <div class="">
-      <label class="text-gray-700 text-sm font-bold mb-2" for="username">
-        First Name
-      </label>
-      <input
-        class="shadow border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
-        id="name"
-        type="text"
-        placeholder="First Name"
-      />
-      <label class="text-gray-700 text-sm font-bold mb-2" for="username">
-        First Name
-      </label>
-      <input
-        class="shadow border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
-        id="name"
-        type="text"
-        placeholder="Last Name"
-      />
+    <div class="flex flex-col mt-12 w-full max-w-xl gap-y-4">
+      <div class="flex justify-items-stretch gap-x-4">
+        <form-input text="First Name" placeholder="John" required="true" />
+        <form-input text="Last Name" placeholder="Doe" required="true" />
+      </div>
+      <div>
+        <form-input text="Email" placeholder="JohnDoe@example.com" required="true" />
+      </div>
+      <div class="flex justify-items-stretch gap-x-4">
+        <form-input text="High School" placeholder="Bellevue High School" required="true" />
+      </div>
     </div>
   </div>
 </template>
