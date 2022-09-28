@@ -7,28 +7,29 @@
         style="min-height: calc(100vh - 165px)"
       >
         <div class="flex-grow"></div>
-        <div class="relative">
-          <h1
-            class="md:text-9xl sm:text-8xl text-6xl font-bold font-poppins flex-0"
-          >
-            Hack <br />
-            The <br />
-            Northwest <br />
-          </h1>
-          <div class="absolute w-[50rem] right-0 -top-[10rem] hidden 2xl:block z-[-10]">
-          <image
-            src="Orca.png"
-            alt="An Orca using a laptop"
-          />
-          </div>
-        </div>
-        <div class="flex-grow" id="about">
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="md:text-9xl sm:text-8xl text-6xl font-bold font-poppins flex-0">
+              Hack <br />
+              The <br />
+              Northwest <br />
+            </h1>
+            <div class="flex-grow" id="about">
           <button
             class="mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-10 text-white font-bold text-xl w-fit"
             @click="goToRegistration"
           >
             Register
           </button>
+        </div>
+          </div>
+          <div>
+            <img
+              src="Orca.png"
+              alt="An Orca using a laptop"
+              class="w-[50rem] hidden 2xl:block"
+            />
+          </div>
         </div>
       </div>
 
