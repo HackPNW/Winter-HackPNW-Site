@@ -30,7 +30,7 @@
             <img
               src="../assets/Orca.png"
               alt="An Orca using a laptop"
-              class="w-[50rem] hidden 2xl:block"
+              class="w-[49rem] hidden 2xl:block"
             />
           </div>
         </div>
