@@ -15,11 +15,12 @@
             The <br />
             Northwest <br />
           </h1>
+          <div class="absolute w-[50rem] right-0 -top-[10rem] hidden 2xl:block z-[-10]">
           <image
             src="Orca.png"
             alt="An Orca using a laptop"
-            class="absolute w-[50rem] right-0 -top-[13rem] hidden 2xl:block z-[-10]"
           />
+          </div>
         </div>
         <div class="flex-grow" id="about">
           <button
