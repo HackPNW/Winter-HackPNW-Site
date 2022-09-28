@@ -1,4 +1,7 @@
 {
   "semi": true,
-  "singleQuote": false
+  "singleQuote": false,
+  "vueIndentScriptAndStyle": true,
+  "endOfLine": "crlf",
+  "bracketSameLine": true
 }
