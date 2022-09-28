@@ -4,30 +4,33 @@
     <div class="h-full border-4 mx-6 border-black">
       <div
         class="flex flex-col justify-between border-b-4 border-black p-4 md:p-10"
-        
       >
-       <div class="hidden md:flex-grow"></div>
-        <div class="2xl:my-[9.5rem] xl:my-24 md:my-12 flex justify-between items-center">
+        <div class="hidden md:flex-grow"></div>
+        <div
+          class="2xl:my-[9.5rem] xl:my-24 md:my-12 flex justify-between items-center"
+        >
           <div>
-            <h1 class="lg:text-9xl text-5xl md:8xl sm:text-8xl font-bold font-poppins flex-0">
+            <h1
+              class="lg:text-9xl text-5xl md:8xl sm:text-8xl font-bold font-poppins flex-0"
+            >
               Hack <br />
               The <br />
               Northwest <br />
             </h1>
             <div class="flex-grow" id="about">
-          <button
-            class="mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-10 text-white font-bold text-xl w-fit"
-            @click="goToRegistration"
-          >
-            Register
-          </button>
-        </div>
+              <button
+                class="transition mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-10 text-white font-bold text-xl w-fit"
+                @click="goToRegistration"
+              >
+                Register
+              </button>
+            </div>
           </div>
           <div>
             <img
               src="../assets/Orca.png"
               alt="An Orca using a laptop"
-              class="w-[50rem] hidden 2xl:block"
+              class="w-[49rem] hidden 2xl:block"
             />
           </div>
         </div>
@@ -72,7 +75,6 @@ import BasedFooter from "../components/BasedFooter.vue";
 import { getFaqColumns } from "../faqs";
 import { ref } from "vue";
 
-
 const router = useRouter();
 
 const faqsData = getFaqColumns(3);
@@ -81,10 +83,10 @@ const goToRegistration = () => {
   router.push("/register");
 };
 
-const shouldRotate = ref(false)
+const shouldRotate = ref(false);
 
 const rotateOrca = () => {
-  shouldRotate.value = false
-  shouldRotate.value = true
-}
+  shouldRotate.value = false;
+  shouldRotate.value = true;
+};
 </script>
