@@ -34,7 +34,7 @@
         placeholder="Hey there..."
       />
       <button
-        class="bg-green-400 rounded-md text-lg px-2 py-1 outline-0 text-white font-bold"
+        class="bg-slate-500 rounded-md text-lg px-2 py-1 outline-0 text-white font-bold"
       >
         Send
       </button>

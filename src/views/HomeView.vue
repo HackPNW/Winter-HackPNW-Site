@@ -1,15 +1,15 @@
 <template>
-  <div class="min-h-screen scroll-smooth">
+  <div class="min-h-screen scroll-smooth items-center">
     <nav-bar />
     <div class="h-full border-4 mx-6 border-black">
       <div
-        class="flex flex-col justify-between border-b-4 border-black p-4 sm:p-10"
-        style="min-height: calc(100vh - 165px)"
+        class="flex flex-col justify-between border-b-4 border-black p-4 md:p-10"
+        
       >
-        <div class="flex-grow"></div>
+       <div class="hidden md:flex-grow"></div>
         <div class="flex justify-between items-center">
           <div>
-            <h1 class="md:text-9xl sm:text-8xl text-6xl font-bold font-poppins flex-0">
+            <h1 class="md:text-9xl sm:text-8xl text-4xl sm:text-6xl font-bold font-poppins flex-0">
               Hack <br />
               The <br />
               Northwest <br />
@@ -23,7 +23,7 @@
           </button>
         </div>
           </div>
-          <div>
+          <div class="item">
             <img
               src="Orca.png"
               alt="An Orca using a laptop"
