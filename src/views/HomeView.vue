@@ -7,9 +7,9 @@
         
       >
        <div class="hidden md:flex-grow"></div>
-        <div class="flex justify-between items-center">
+        <div class="2xl:my-[9.5rem] xl:my-24 md:my-12 flex justify-between items-center">
           <div>
-            <h1 class="lg:text-9xl text-4xl sm:text-7xl font-bold font-poppins flex-0">
+            <h1 class="lg:text-9xl text-5xl md:8xl sm:text-8xl font-bold font-poppins flex-0">
               Hack <br />
               The <br />
               Northwest <br />
@@ -23,9 +23,9 @@
           </button>
         </div>
           </div>
-          <div class="item transform scale-100 hover:scale-125 active:rotate-180 hover:rotate-45 duration-300 cursor-pointer">
+          <div>
             <img
-              src="../../public/Orca.png"
+              src="../assets/Orca.png"
               alt="An Orca using a laptop"
               class="w-[50rem] hidden 2xl:block"
             />
@@ -80,4 +80,11 @@ const faqsData = getFaqColumns(3);
 const goToRegistration = () => {
   router.push("/register");
 };
+
+const shouldRotate = ref(false)
+
+const rotateOrca = () => {
+  shouldRotate.value = false
+  shouldRotate.value = true
+}
 </script>
