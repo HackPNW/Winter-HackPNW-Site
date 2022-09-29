@@ -69,7 +69,7 @@
       </div>
 
       <div
-        class="bg-white flex justify-between px-1 py-1 rounded-md items-center mt-8">
+        class="flex justify-between px-1 py-1 rounded-md items-center mt-8">
         <button
           class="text-xl font-semibold px-2 py-1 rounded-md transition"
           :class="createTeam ? '' : 'bg-red-500 text-white shadow-lg'"
