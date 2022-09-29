@@ -55,10 +55,16 @@
       </h2>
 
       <div class="flex flex-col lg:flex-row gap-x-2 mb-4">
-        <div class="flex flex-1 gap-y-2 gap-x-8 mb-2">
-          <h1 class="flex text-center text-2xl font-semibold bg-gray-300 w-full max-w-[20rem] h-[17rem] rounded-2xl">This could be you!</h1>
-          <h1 class="flex text-center text-2xl font-semibold bg-gray-300 w-full max-w-[20rem] h-[17rem] rounded-2xl">This could be you!</h1>
-          <h1 class="flex text-center text-2xl font-semibold bg-gray-300 w-full max-w-[20rem] h-[17rem] rounded-2xl">This could be you!</h1>
+        <div class="flex flex-1 gap-y-2 mb-2 gap-x-24 items-center justify-center">
+          <div class="flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 rounded-2xl">
+            <h1 class="flex text-center text-2xl font-semibold">This could be you!</h1>
+          </div>
+          <div class="flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 rounded-2xl">
+            <h1 class="flex text-center text-2xl font-semibold">This could be you!</h1>
+          </div>
+          <div class="flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 rounded-2xl">
+            <h1 class="flex text-center text-2xl font-semibold">This could be you!</h1>
+          </div>
         </div>
       </div>
 
