@@ -23,30 +23,30 @@
     </h1>
     <div class="flex flex-col mt-12 w-full max-w-xl gap-y-4 p-6">
       <div class="flex justify-items-stretch gap-x-4">
-        <form-input text="First Name" placeholder="John" required="true" />
-        <form-input text="Last Name" placeholder="Doe" required="true" />
+        <form-input text="First Name" placeholder="John" :required="true" />
+        <form-input text="Last Name" placeholder="Doe" :required="true" />
       </div>
       <div>
         <form-input
           text="Email"
           placeholder="JohnDoe@example.com"
-          required="true" />
+          :required="true" />
       </div>
       <div class="flex gap-x-4">
         <form-input
           text="High School"
           placeholder="Bellevue High School"
-          required="true" />
+          :required="true" />
         <selection-form-input
           label="Grade"
           :options="[9, 10, 11, 12]"
-          required="true" />
+          :required="true" />
       </div>
       <div>
         <form-input
           text="Github Profile"
           placeholder="https://github.com/0xEquinox"
-          required="false" />
+          :required="false" />
       </div>
       <p class="text-gray-700 text-sm font-bold mb-2">
         Pick your favorite color
