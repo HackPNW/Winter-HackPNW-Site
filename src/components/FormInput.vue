@@ -5,7 +5,6 @@
     </label>
     <input
       class="w-full shadow border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
-      id="name"
       type="text"
       :placeholder="props.placeholder" />
   </div>

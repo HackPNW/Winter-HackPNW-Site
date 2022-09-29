@@ -21,7 +21,7 @@
       class="text-5xl font-bold font-poppins underline decoration-red-500 decoration-8 underline-offset-[12px]">
       Register
     </h1>
-    <div class="flex flex-col mt-12 w-full max-w-xl gap-y-4">
+    <div class="flex flex-col mt-12 w-full max-w-xl gap-y-4 p-6">
       <div class="flex justify-items-stretch gap-x-4">
         <form-input text="First Name" placeholder="John" required="true" />
         <form-input text="Last Name" placeholder="Doe" required="true" />
@@ -48,6 +48,17 @@
           placeholder="https://github.com/0xEquinox"
           required="false" />
       </div>
+      <p class="text-gray-700 text-sm font-bold mb-2">
+        Pick your favorite color
+      </p>
+      <div class="flex gap-6">
+        <button
+          v-for="color in colors"
+          :key="color"
+          class="rounded-full transition-all h-8 flex-1"
+          :class="[`bg-${color}-500`, `shadow-${color}-500/100`, color == selectedColor ? '-translate-y-2 shadow-md scale-[1.2]' : 'hover:-translate-y-0.5']"
+          @click="setFavouriteColor(color)" />
+      </div>
     </div>
 
     <button
@@ -58,11 +69,21 @@
 </template>
 
 <script setup>
+  import { ref, computed } from "vue";
   import { useRouter } from "vue-router";
   import FormInput from "../components/FormInput.vue";
   import SelectionFormInput from "../components/SelectionFormInput.vue";
 
   const router = useRouter();
+
+  const colors = ["red", "amber", "green", "cyan", "violet", "pink"];
+  const selectedColor = ref("");
+  const setFavouriteColor = (color) => (selectedColor.value = color);
+  // const getColorClasses = computed((color) => {
+  //   let classes = [`bg-${color}-500`];
+  //
+  //   if (color === selectedColor.value) classes.push("w-12")
+  // });
 
   const goToRegistration = () => {
     router.push("/");
