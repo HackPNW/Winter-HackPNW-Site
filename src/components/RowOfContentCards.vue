@@ -18,7 +18,9 @@
       </p>
       <div class="w-full my-6 text-center">
         <button
-          class="transition rounded-full bg-red-500 hover:bg-red-400 py-2 px-5 text-white font-bold text-xl">
+          class="transition rounded-full bg-red-500 hover:bg-red-400 py-2 px-5 text-white font-bold text-xl"
+          @click="goToRegistration"
+        >
           Register
         </button>
       </div>
@@ -55,5 +57,13 @@
 </template>
 
 <script setup>
-  import ContentCard from "../components/ContentCard.vue";
+import ContentCard from "../components/ContentCard.vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const goToRegistration = () => {
+  router.push("/register");
+};
+
 </script>

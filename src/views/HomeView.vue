@@ -49,9 +49,19 @@
     </div>
     <div id="sponsors" class="h-screen">
       <h2
-        class="text-center text-6xl font-semibold pb-6 pt-4 my-5 underline decoration-amber-500 decoration-8 underline-offset-8">
+        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-amber-500 decoration-8 underline-offset-8"
+      >
         Sponsors
       </h2>
+
+      <div class="flex flex-col lg:flex-row gap-x-2 mb-4">
+        <div class="flex flex-1 gap-y-2 gap-x-8 mb-2">
+          <h1 class="flex text-center text-2xl font-semibold bg-gray-300 w-full max-w-[20rem] h-[17rem] rounded-2xl">This could be you!</h1>
+          <h1 class="flex text-center text-2xl font-semibold bg-gray-300 w-full max-w-[20rem] h-[17rem] rounded-2xl">This could be you!</h1>
+          <h1 class="flex text-center text-2xl font-semibold bg-gray-300 w-full max-w-[20rem] h-[17rem] rounded-2xl">This could be you!</h1>
+        </div>
+      </div>
+
     </div>
     <based-footer />
   </div>
