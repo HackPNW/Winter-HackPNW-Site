@@ -22,6 +22,8 @@
       Register
     </h1>
     <div class="flex flex-col mt-12 w-full max-w-xl gap-y-4 p-6">
+      <!-- START FORM -->
+
       <div class="flex justify-items-stretch gap-x-4">
         <form-input text="First Name" placeholder="John" :required="true" />
         <form-input text="Last Name" placeholder="Doe" :required="true" />
@@ -29,13 +31,13 @@
       <div>
         <form-input
           text="Email"
-          placeholder="JohnDoe@example.com"
+          placeholder="john.doe@example.com"
           :required="true" />
       </div>
       <div class="flex gap-x-4">
         <form-input
           text="High School"
-          placeholder="Bellevue High School"
+          placeholder="Hacker High School"
           :required="true" />
         <selection-form-input
           label="Grade"
@@ -51,14 +53,87 @@
       <p class="text-gray-700 text-sm font-bold mb-2">
         Pick your favorite color
       </p>
-      <div class="flex gap-6">
+      <div class="flex gap-2 sm:gap-6">
         <button
           v-for="color in colors"
           :key="color"
           class="rounded-full transition-all h-8 flex-1"
-          :class="[`bg-${color}-500`, `shadow-${color}-500/100`, color == selectedColor ? '-translate-y-2 shadow-md scale-[1.2]' : 'hover:-translate-y-0.5']"
+          :class="[
+            `bg-${color}-500`,
+            `shadow-${color}-500/100`,
+            color == selectedColor
+              ? '-translate-y-2 shadow-md scale-[1.2]'
+              : 'hover:-translate-y-0.5',
+          ]"
           @click="setFavouriteColor(color)" />
       </div>
+
+      <div
+        class="bg-white flex justify-between px-1 py-1 rounded-md items-center mt-8">
+        <button
+          class="text-xl font-semibold px-2 py-1 rounded-md transition"
+          :class="createTeam ? '' : 'bg-red-500 text-white shadow-lg'"
+          @click="createTeam = false">
+          Join a team
+        </button>
+        <p class="text-gray-600">or</p>
+        <button
+          class="text-xl font-semibold px-2 py-1 rounded-md transition"
+          :class="createTeam ? 'bg-red-500 text-white shadow-lg' : ''"
+          @click="createTeam = true">
+          Create a team
+        </button>
+      </div>
+
+      <!-- JOIN TEAM -->
+
+      <form-checkbox
+        text="I have a team and the team code"
+        :checked="hasTeamCode"
+        @click="hasTeamCode = true"
+        v-if="!createTeam" />
+      <form-checkbox
+        text="I do not have a team, please put me in one"
+        :checked="!hasTeamCode"
+        @click="hasTeamCode = false"
+        v-if="!createTeam" />
+
+      <form-input
+        text="Team code"
+        placeholder="1234-5678"
+        v-if="hasTeamCode && !createTeam" />
+
+      <!-- CREATE TEAM -->
+
+      <p class="text-gray-500 text-sm" v-if="createTeam">
+        <span class="font-bold text-gray-700">Note</span> <br />
+        There is a maximum of 4 people per team. <br />
+        If you are the only person in your team by the end of the registration
+        period, you will be moved in a team with other people.
+      </p>
+
+      <form-input
+        text="Team name"
+        placeholder="The Super Cool Programmers"
+        v-if="createTeam" />
+
+      <p class="text-gray-700 font-bold text-sm" v-if="createTeam">
+        Are you okay with letting HackPNW put people without a team in your team
+        if your team does not have 4 members by the end of the registration
+        period?
+      </p>
+      <form-checkbox
+        text="Yes, I'm okay with solo hackers joining my team"
+        :checked="fillTeam"
+        @click="fillTeam = true"
+        v-if="createTeam" />
+      <form-checkbox
+        text="No, I don't want anyone else joining my team"
+        :checked="!fillTeam"
+        @click="fillTeam = false"
+        v-if="createTeam" />
+
+      <!-- END FORM -->
     </div>
 
     <button
@@ -73,17 +148,16 @@
   import { useRouter } from "vue-router";
   import FormInput from "../components/FormInput.vue";
   import SelectionFormInput from "../components/SelectionFormInput.vue";
+  import FormCheckbox from "../components/FormCheckbox.vue";
 
   const router = useRouter();
 
   const colors = ["red", "amber", "green", "cyan", "violet", "pink"];
   const selectedColor = ref("");
   const setFavouriteColor = (color) => (selectedColor.value = color);
-  // const getColorClasses = computed((color) => {
-  //   let classes = [`bg-${color}-500`];
-  //
-  //   if (color === selectedColor.value) classes.push("w-12")
-  // });
+  const createTeam = ref(false);
+  const hasTeamCode = ref(true);
+  const fillTeam = ref(true);
 
   const goToRegistration = () => {
     router.push("/");

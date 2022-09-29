@@ -49,25 +49,33 @@
     </div>
     <div id="sponsors" class="h-screen">
       <h2
-        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-amber-500 decoration-8 underline-offset-8"
-      >
+        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-amber-500 decoration-8 underline-offset-8">
         Sponsors
       </h2>
 
       <div class="flex flex-col lg:flex-row gap-x-2 mb-4">
-        <div class="flex flex-1 gap-y-2 mb-2 gap-x-24 items-center justify-center">
-          <div class="flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 rounded-2xl">
-            <h1 class="flex text-center text-2xl font-semibold">This could be you!</h1>
+        <div
+          class="flex flex-1 gap-y-2 mb-2 gap-x-24 items-center justify-center">
+          <div
+            class="flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 rounded-2xl">
+            <h1 class="flex text-center text-2xl font-semibold">
+              This could be you!
+            </h1>
           </div>
-          <div class="flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 rounded-2xl">
-            <h1 class="flex text-center text-2xl font-semibold">This could be you!</h1>
+          <div
+            class="flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 rounded-2xl">
+            <h1 class="flex text-center text-2xl font-semibold">
+              This could be you!
+            </h1>
           </div>
-          <div class="flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 rounded-2xl">
-            <h1 class="flex text-center text-2xl font-semibold">This could be you!</h1>
+          <div
+            class="flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 rounded-2xl">
+            <h1 class="flex text-center text-2xl font-semibold">
+              This could be you!
+            </h1>
           </div>
         </div>
       </div>
-
     </div>
     <based-footer />
   </div>
