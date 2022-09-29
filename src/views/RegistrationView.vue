@@ -68,8 +68,7 @@
           @click="setFavouriteColor(color)" />
       </div>
 
-      <div
-        class="flex justify-between px-1 py-1 rounded-md items-center mt-8">
+      <div class="flex justify-between px-1 py-1 rounded-md items-center mt-8">
         <button
           class="text-xl font-semibold px-2 py-1 rounded-md transition"
           :class="createTeam ? '' : 'bg-red-500 text-white shadow-lg'"
@@ -109,7 +108,7 @@
         <span class="font-bold text-gray-700">Note</span> <br />
         There is a maximum of 4 people per team. <br />
         If you are the only person in your team by the end of the registration
-        period, you will be moved in a team with other people.
+        period, you will be moved into a team with other people.
       </p>
 
       <form-input
