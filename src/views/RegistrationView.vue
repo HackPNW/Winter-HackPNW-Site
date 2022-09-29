@@ -33,16 +33,27 @@
       <div>
         <form-input text="Email" placeholder="JohnDoe@example.com" required="true" />
       </div>
-      <div class="flex justify-items-stretch gap-x-4">
+      <div class="flex gap-x-4">
         <form-input text="High School" placeholder="Bellevue High School" required="true" />
+        <selection-form-input label="Grade" :options="[9, 10, 11, 12]" required="true" />
+      </div>
+      <div>
+        <form-input text="Github Profile" placeholder="https://github.com/0xEquinox" required="false" />
       </div>
     </div>
+
+    <button
+      class="transition mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-6 text-white font-bold text-xl w-fit"
+    >
+      Register
+    </button>
   </div>
 </template>
 
 <script setup>
 import { useRouter } from "vue-router";
 import FormInput from "../components/FormInput.vue"
+import SelectionFormInput from "../components/SelectionFormInput.vue";
 
 const router = useRouter();
 
