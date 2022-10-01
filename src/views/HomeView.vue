@@ -47,7 +47,7 @@
       </div>
       <more-question-box />
     </div>
-    <div id="sponsors" class="h-screen">
+    <div id="sponsors">
       <h2
         class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-amber-500 decoration-8 underline-offset-8">
         Sponsors
@@ -55,7 +55,7 @@
 
       <div class="flex flex-col lg:flex-row gap-x-2 mb-4">
         <div
-          class="flex flex-1 gap-y-2 mb-2 gap-x-24 items-center justify-center">
+          class="flex flex-1 gap-y-2 mb-2 gap-x-24 items-center justify-center flex-col lg:flex-row">
           <div
             class="flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 rounded-2xl">
             <h1 class="flex text-center text-2xl font-semibold">
