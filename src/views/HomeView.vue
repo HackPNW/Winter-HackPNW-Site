@@ -56,9 +56,9 @@
       <div class="flex flex-col lg:flex-row gap-x-2 mb-4">
         <div
           class="flex flex-1 gap-y-2 mb-2 p-4 gap-x-24 items-center justify-center flex-col lg:flex-row">
-          <sponsor-card text="This could be you!"/>
-          <sponsor-card text="This could be you!"/>
-          <sponsor-card text="This could be you!"/>
+          <sponsor-card text="This could be you!" />
+          <sponsor-card text="This could be you!" />
+          <sponsor-card text="This could be you!" />
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@
   import BasedFooter from "../components/BasedFooter.vue";
   import { getFaqColumns } from "../faqs";
   import { ref } from "vue";
-import SponsorCard from "../components/SponsorCard.vue";
+  import SponsorCard from "../components/SponsorCard.vue";
 
   const router = useRouter();
 
