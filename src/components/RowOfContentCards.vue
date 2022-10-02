@@ -30,11 +30,10 @@
       color="amber-500"
       class="lg:border-l-4 border-b-4 lg:border-b-0">
       <p class="text-lg px-2 my-4 font-semibold">
-        Our mission is to bring together highschool students from all over the
-        region for a weekend-long hackathon that's as fun as it is educational.
-        We want to help students from different schools and backgrounds form
-        cross-campus connections, learn from each other, and build their
-        skillset with real world experience.
+        We are a group of high school students from the Seattle area that
+        want to help students from different schools and backgrounds form
+        cross-campus connections, learn from each other and build their
+        skillset with real-world experience.
       </p>
       <div class="w-full my-6 text-center">
         <button
