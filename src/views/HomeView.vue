@@ -56,24 +56,9 @@
       <div class="flex flex-col lg:flex-row gap-x-2 mb-4">
         <div
           class="flex flex-1 gap-y-2 mb-2 p-4 gap-x-24 items-center justify-center flex-col lg:flex-row">
-          <div
-            class="cursor-pointer transition flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 hover:bg-gray-200 rounded-2xl">
-            <h1 class="flex text-center text-2xl font-semibold">
-              This could be you!
-            </h1>
-          </div>
-          <div
-            class="cursor-pointer transition flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 hover:bg-gray-200 rounded-2xl">
-            <h1 class="flex text-center text-2xl font-semibold">
-              This could be you!
-            </h1>
-          </div>
-          <div
-            class="cursor-pointer transition flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 hover:bg-gray-200 rounded-2xl">
-            <h1 class="flex text-center text-2xl font-semibold">
-              This could be you!
-            </h1>
-          </div>
+          <sponsor-card text="This could Be You!"/>
+          <sponsor-card text="This could Be You!"/>
+          <sponsor-card text="This could Be You!"/>
         </div>
       </div>
     </div>
@@ -91,6 +76,7 @@
   import BasedFooter from "../components/BasedFooter.vue";
   import { getFaqColumns } from "../faqs";
   import { ref } from "vue";
+import SponsorCard from "../components/SponsorCard.vue";
 
   const router = useRouter();
 
