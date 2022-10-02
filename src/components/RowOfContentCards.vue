@@ -30,10 +30,11 @@
       color="amber-500"
       class="lg:border-l-4 border-b-4 lg:border-b-0">
       <p class="text-lg px-2 my-4 font-semibold">
-        We are a group of high school students from the Seattle area that
-        want to help students from different schools and backgrounds form
-        cross-campus connections, learn from each other and build their
-        skillset with real-world experience.
+        We are a group of high school students from the Seattle area who
+        were frustrated by the lack of high school level programming events in our area,
+        so we created our own! Our goal with HackPNW is to bring together 
+        students to form cross-campus connections, learn from each other,
+        and build on each others' skillsets with real world experience.  
       </p>
       <div class="w-full my-6 text-center">
         <button
