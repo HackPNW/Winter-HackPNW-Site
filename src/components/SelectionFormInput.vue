@@ -4,7 +4,9 @@
       {{ props.label }}
     </label>
     <select
-      class="shadow border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline">
+      class="shadow border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)">
       <option v-for="item in options">
         {{ item }}
       </option>
@@ -17,5 +19,7 @@
     label: String,
     options: Array,
     required: Boolean,
+    modelValue: String,
   });
+  defineEmits(["update:modelValue"]);
 </script>
