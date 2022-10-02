@@ -55,7 +55,7 @@
 
       <div class="flex flex-col lg:flex-row gap-x-2 mb-4">
         <div
-          class="flex flex-1 gap-y-2 mb-2 gap-x-24 items-center justify-center flex-col lg:flex-row">
+          class="flex flex-1 gap-y-2 mb-2 p-4 gap-x-24 items-center justify-center flex-col lg:flex-row">
           <div
             class="flex justify-center items-center w-full max-w-[20rem] aspect-square bg-gray-300 rounded-2xl">
             <h1 class="flex text-center text-2xl font-semibold">
