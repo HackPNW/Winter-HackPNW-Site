@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full px-2 md:px-8 py-4 items-center">
+  <div class="flex flex-col w-full px-2 md:px-8 pt-4 pb-20 items-center">
     <div
       class="flex self-start items-center text-red-500 px-4 py-2 mb-4 bg-gray-300 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
       @click="goToRegistration">
@@ -147,10 +147,30 @@
         v-if="formData.createTeam" />
 
       <!-- END FORM -->
-      <div>
-        <p v-for="error in errors">
-          {{ error }}
+      <div
+        class="ring-2 rounded-md px-2 text-gray-700 font-semibold mt-8"
+        :class="
+          errors.length
+            ? 'bg-amber-200 ring-amber-500'
+            : 'bg-green-300 ring-green-500'
+        ">
+        <p class="text-lg font-bold">
+          {{
+            errors.length
+              ? "There are a couple issues you need to fix before you can register"
+              : "Everything looks good!"
+          }}
         </p>
+        <p v-if="!errors.length">
+          Please make sure all your information is correct as this is the
+          information that will be displayed on your name tag and so we can
+          contact you about the event!
+        </p>
+        <ul>
+          <li v-for="error in errors">
+            {{ error }}
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -162,7 +182,7 @@
 </template>
 
 <script setup>
-  import { reactive } from "vue";
+  import { reactive, computed } from "vue";
   import { useRouter } from "vue-router";
   import FormInput from "../components/FormInput.vue";
   import SelectionFormInput from "../components/SelectionFormInput.vue";
@@ -250,10 +270,12 @@
     }),
   });
 
-  const { errors, useFieldModel } = useForm({
+  const { errors: formErrors, useFieldModel } = useForm({
     validationSchema: formSchema,
     initialValues: formFields,
   });
+
+  const errors = computed(() => Object.values(formErrors.value));
 
   const formData = registerFormFields(formFields, useFieldModel);
 
