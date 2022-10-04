@@ -38,7 +38,8 @@
       </p>
       <div class="w-full my-6 text-center">
         <button
-          class="transition rounded-full bg-amber-500 hover:bg-amber-400 py-2 px-5 text-white font-bold text-xl">
+          class="transition rounded-full bg-amber-500 hover:bg-amber-400 py-2 px-5 text-white font-bold text-xl"
+          @click="goToContactUs">
           Contact Us
         </button>
       </div>
@@ -63,5 +64,9 @@
 
   const goToRegistration = () => {
     router.push("/register");
+  };
+
+  const goToContactUs = () => {
+    router.push("/contact")
   };
 </script>
