@@ -67,6 +67,6 @@
   };
 
   const goToContactUs = () => {
-    router.push("/contact")
+    router.push("/contact");
   };
 </script>
