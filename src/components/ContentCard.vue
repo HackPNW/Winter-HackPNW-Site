@@ -4,8 +4,7 @@
       {{ title }}
       <div
         class="absolute h-4 w-[85%] xl:w-[95%] 2xl:w-full -mt-3 ml-5 z-[-1]"
-        :class="'bg-' + color"
-      />
+        :class="'bg-' + color" />
     </h1>
 
     <slot />
@@ -13,8 +12,8 @@
 </template>
 
 <script setup>
-defineProps({
-  title: String,
-  color: String, // TailwindCSS color
-});
+  defineProps({
+    title: String,
+    color: String, // TailwindCSS color
+  });
 </script>

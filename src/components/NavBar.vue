@@ -9,8 +9,7 @@
             class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             aria-controls="mobile-menu"
             aria-expanded="false"
-            @click="toggleMobileMenu"
-          >
+            @click="toggleMobileMenu">
             <span class="sr-only">Open main menu</span>
 
             <svg
@@ -20,13 +19,11 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              aria-hidden="true"
-            >
+              aria-hidden="true">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
 
             <svg
@@ -36,19 +33,16 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              aria-hidden="true"
-            >
+              aria-hidden="true">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
+                d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between"
-        >
+          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
           <div class="flex">
             <div class="flex flex-shrink-0">
               <h1 class="text-3xl text-black font-bold">HackPNW</h1>
@@ -85,8 +79,7 @@
           <div class="flex hidden sm:inline align-middle">
             <button
               @click="goToRegistration"
-              class="bg-red-500 text-white font-semibold hover:bg-red-400 hover:text-white px-4 py-2 rounded-full text-sm"
-            >
+              class="bg-red-500 text-white font-semibold hover:bg-red-400 hover:text-white px-4 py-2 rounded-full text-sm">
               REGISTER
             </button>
           </div>
@@ -133,29 +126,29 @@
 </template>
 
 <style scoped>
-.link-underline {
-  border-bottom-width: 0;
-  background-image: linear-gradient(transparent, transparent),
-    linear-gradient(rgb(239 68 68), rgb(239 68 68));
-  background-size: 0 3px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.1s ease-in-out;
-}
-.link-underline:hover {
-  background-size: 100% 3px;
-  background-position: 0 100%;
-}
+  .link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(rgb(239 68 68), rgb(239 68 68));
+    background-size: 0 3px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.1s ease-in-out;
+  }
+  .link-underline:hover {
+    background-size: 100% 3px;
+    background-position: 0 100%;
+  }
 </style>
 
 <script setup>
-import { ref } from "vue";
-import { useRouter } from "vue-router";
+  import { ref } from "vue";
+  import { useRouter } from "vue-router";
 
-const router = useRouter();
+  const router = useRouter();
 
-const goToRegistration = () => router.push("/register");
+  const goToRegistration = () => router.push("/register");
 
-const mobileMenuOpen = ref(false);
-const toggleMobileMenu = () => (mobileMenuOpen.value = !mobileMenuOpen.value);
+  const mobileMenuOpen = ref(false);
+  const toggleMobileMenu = () => (mobileMenuOpen.value = !mobileMenuOpen.value);
 </script>
