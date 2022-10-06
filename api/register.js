@@ -111,10 +111,14 @@ export default async function handler(request, response) {
     console.log(teamDoc);
     doc.teamId = teamDoc._id;
     teamCode = teamDoc.code;
+  } else if (form.hasTeamCode) {
+    const teamDoc = await db
+      .collection("teams")
+      .findOne({ code: form.teamCode });
+    if (!teamDoc) return response.status(400).send("Not valid team code");
+    doc.teamId = teamDoc._id;
   } else {
-    doc.teamId = (
-      await db.collection("teams").findOne({ code: form.teamCode })
-    )._id;
+    doc.teamId = null;
   }
 
   await collection.insertOne(doc);
