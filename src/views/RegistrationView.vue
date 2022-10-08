@@ -189,6 +189,7 @@
   import FormCheckbox from "../components/FormCheckbox.vue";
   import { useForm } from "vee-validate";
   import * as yup from "yup"; // TODO: Optimize yup import
+  import axios from "axios";
 
   const router = useRouter();
 
