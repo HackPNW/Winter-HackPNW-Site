@@ -125,7 +125,7 @@
         v-if="formData.hasTeamCode && !formData.createTeam"
         v-model="formData.teamCode"
         :disabled="beenInvited">
-        <p class="mt-1 text-gray-500 text-sm">
+        <p class="mt-1 text-gray-500 text-sm" v-if="beenInvited">
           Don't worry, we've filled in the team code for you!
         </p>
       </form-input>
@@ -198,7 +198,7 @@
 </template>
 
 <script setup>
-  import { reactive, computed, onMounted, toRaw } from "vue";
+  import { reactive, computed, onMounted } from "vue";
   import { useRouter, useRoute } from "vue-router";
   import FormInput from "../components/FormInput.vue";
   import SelectionFormInput from "../components/SelectionFormInput.vue";
@@ -215,7 +215,7 @@
     code: route.query.c,
   });
   const beenInvited = computed(() => {
-    return inviteInfo.name && inviteInfo.code;
+    return Boolean(inviteInfo.name && inviteInfo.code);
   });
 
   const colorOptions = ["red", "amber", "green", "cyan", "violet", "pink"];
@@ -296,7 +296,11 @@
     }),
   });
 
-  const { errors: formErrors, useFieldModel, handleSubmit } = useForm({
+  const {
+    errors: formErrors,
+    useFieldModel,
+    handleSubmit,
+  } = useForm({
     validationSchema: formSchema,
     initialValues: formFields,
   });
@@ -313,7 +317,7 @@
     handleSubmit((data) => {
       axios.post("/api/register", data);
     })();
-  }
+  };
 
   onMounted(() => {
     if (beenInvited) {
