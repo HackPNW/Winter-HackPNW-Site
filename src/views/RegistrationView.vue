@@ -24,6 +24,14 @@
     <div class="flex flex-col mt-12 w-full max-w-xl gap-y-4 p-6">
       <!-- START FORM -->
 
+      <div
+        v-if="beenInvited"
+        class="ring-2 rounded-md px-2 text-gray-700 font-semibold bg-green-300 ring-green-500">
+        Hey there! <br />
+        <span class="font-bold">{{ inviteInfo.name }}</span> has invited you to
+        join their team! <br />
+        Simply fill in the fields below to finish registering!
+      </div>
       <div class="flex justify-items-stretch gap-x-4">
         <form-input
           text="First Name"
@@ -80,7 +88,9 @@
           @click="setFavouriteColor(color)" />
       </div>
 
-      <div class="flex justify-between px-1 py-1 rounded-md items-center mt-8">
+      <div
+        class="flex justify-between px-1 py-1 rounded-md items-center mt-8"
+        v-if="!beenInvited">
         <button
           class="text-xl font-semibold px-2 py-1 rounded-md transition"
           :class="formData.createTeam ? '' : 'bg-red-500 text-white shadow-lg'"
@@ -102,18 +112,23 @@
         text="I have a team and the team code"
         :checked="formData.hasTeamCode"
         @click="formData.hasTeamCode = true"
-        v-if="!formData.createTeam" />
+        v-if="!formData.createTeam && !beenInvited" />
       <form-checkbox
         text="I do not have a team, please put me in one"
         :checked="!formData.hasTeamCode"
         @click="formData.hasTeamCode = false"
-        v-if="!formData.createTeam" />
+        v-if="!formData.createTeam && !beenInvited" />
 
       <form-input
         text="Team code"
         placeholder="1234-5678"
         v-if="formData.hasTeamCode && !formData.createTeam"
-        v-model="formData.teamCode" />
+        v-model="formData.teamCode"
+        :disabled="beenInvited">
+        <p class="mt-1 text-gray-500 text-sm">
+          Don't worry, we've filled in the team code for you!
+        </p>
+      </form-input>
 
       <!-- CREATE TEAM -->
 
@@ -182,8 +197,8 @@
 </template>
 
 <script setup>
-  import { reactive, computed } from "vue";
-  import { useRouter } from "vue-router";
+  import { reactive, computed, onMounted, toRaw } from "vue";
+  import { useRouter, useRoute } from "vue-router";
   import FormInput from "../components/FormInput.vue";
   import SelectionFormInput from "../components/SelectionFormInput.vue";
   import FormCheckbox from "../components/FormCheckbox.vue";
@@ -192,6 +207,15 @@
   import axios from "axios";
 
   const router = useRouter();
+  const route = useRoute();
+
+  const inviteInfo = reactive({
+    name: route.query.i,
+    code: route.query.c,
+  });
+  const beenInvited = computed(() => {
+    return inviteInfo.name && inviteInfo.code;
+  });
 
   const colorOptions = ["red", "amber", "green", "cyan", "violet", "pink"];
   const gradeOptions = ["9", "10", "11", "12"];
@@ -283,4 +307,10 @@
   const goToRegistration = () => {
     router.push("/");
   };
+
+  onMounted(() => {
+    if (beenInvited) {
+      formData.teamCode = inviteInfo.code;
+    }
+  });
 </script>

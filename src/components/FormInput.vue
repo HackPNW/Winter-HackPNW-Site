@@ -8,7 +8,9 @@
       type="text"
       :placeholder="props.placeholder"
       :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)" />
+      @input="$emit('update:modelValue', $event.target.value)"
+      :disabled="disabled" />
+    <slot />
   </div>
 </template>
 
@@ -18,6 +20,7 @@
     placeholder: String,
     required: Boolean,
     modelValue: String,
+    disabled: Boolean,
   });
   defineEmits(["update:modelValue"]);
 </script>
