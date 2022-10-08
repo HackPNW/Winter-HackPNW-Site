@@ -190,7 +190,8 @@
     </div>
 
     <button
-      class="transition mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-6 text-white font-bold text-xl w-fit">
+      class="transition mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-6 text-white font-bold text-xl w-fit"
+      @click="register">
       Register
     </button>
   </div>
@@ -295,7 +296,7 @@
     }),
   });
 
-  const { errors: formErrors, useFieldModel } = useForm({
+  const { errors: formErrors, useFieldModel, handleSubmit } = useForm({
     validationSchema: formSchema,
     initialValues: formFields,
   });
@@ -307,6 +308,12 @@
   const goToRegistration = () => {
     router.push("/");
   };
+
+  const register = () => {
+    handleSubmit((data) => {
+      axios.post("/api/register", data);
+    })();
+  }
 
   onMounted(() => {
     if (beenInvited) {
