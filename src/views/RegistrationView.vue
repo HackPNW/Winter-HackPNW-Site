@@ -66,7 +66,7 @@
       <div>
         <form-input
           text="Github Profile"
-          placeholder="https://github.com/0xEquinox"
+          placeholder="0xEquinox"
           :required="false"
           v-model="formData.github" />
       </div>
