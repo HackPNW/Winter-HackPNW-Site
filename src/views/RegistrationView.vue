@@ -2,7 +2,7 @@
   <div class="flex flex-col w-full px-2 md:px-8 pt-4 pb-20 items-center">
     <div
       class="flex self-start items-center text-red-500 px-4 py-2 mb-4 bg-gray-300 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
-      @click="goToRegistration">
+      @click="goToHome">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -317,14 +317,23 @@
 
   const formData = registerFormFields(formFields, useFieldModel);
 
-  const goToRegistration = () => {
+  const goToHome = () => {
     router.push("/");
+  };
+
+  const handleRegistered = (res, data) => {
+    router.push({
+      path: "/register/complete",
+      query: { c: res.data.teamCode, i: data.firstName },
+    });
   };
 
   const register = () => {
     isSpinning.value = true
     handleSubmit((data) => {
-      axios.post("/api/register", data);
+      axios
+        .post("/api/register", data)
+        .then((res) => handleRegistered(res, data));
     })();
   };
 
