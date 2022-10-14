@@ -5,7 +5,7 @@ const faqs = [
   ],
   [
     "How much does it cost?",
-    "Nothing! HackPNW is 100% free including meals and sleeping arangments!",
+    "Nothing! HackPNW is 100% free including meals!",
   ],
   [
     "Who can register?",
@@ -24,16 +24,16 @@ const faqs = [
     "Of course! There will be over $1000 worth of prizes to win and trust us when we say they will be worth your time.",
   ],
   [
-    "Can I sleep on the floor?",
-    "We 100% advise that you bring a sleeping bag to sleep on the floor with, but yes! Sleep away or hack all the way through, it's your choice!",
+    "Is it over night?",
+    "Unfortunately due to both covid and space restrictions there will be a break during the night.",
   ],
   [
     "What should I bring?",
-    "We recomend you bring a laptop, charger(s) for all your devices, and if you plan on spending the night (which we recomend) bring a sleeping bag and other toiletries you might need. Most of all bring a positive mindset and good energy and you'll have a great time!",
+    "We recomend you bring a laptop, charger(s) for all your devices, and most of all bring a positive mindset and good energy and you'll have a great time!",
   ],
   [
     "How long is HackPNW?",
-    "HackPNW is a 36 hour hackathon starting in the morning of saturday going all the way to sunday evening!",
+    "HackPNW is a 24 hour hackathon starting in the morning of saturday stopping during the night and then going all the way to sunday evening!",
   ],
   [
     "How big is HackPNW?",
@@ -41,7 +41,7 @@ const faqs = [
   ],
   [
     "When is HackPNW?",
-    "HackPNW is going to be on January 7th - January 8th, at the Microsoft Redmond Reactor!",
+    "HackPNW is going to be on Febuary 4th - January 5th, at the Microsoft Redmond Reactor!",
   ],
   [
     "Will there be tech talks and workshops?",

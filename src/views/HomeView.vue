@@ -92,4 +92,8 @@
     shouldRotate.value = false;
     shouldRotate.value = true;
   };
+
+  const expandOrca = () => {
+    
+  }
 </script>

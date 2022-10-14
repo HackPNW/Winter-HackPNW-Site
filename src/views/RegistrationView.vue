@@ -191,7 +191,9 @@
 
     <button
       class="transition mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-6 text-white font-bold text-xl w-fit"
-      @click="register">
+      @click="register"
+      :class="{ 'animate-spin': isSpinning }"
+      >
       Register
     </button>
   </div>
@@ -206,6 +208,8 @@
   import { useForm } from "vee-validate";
   import * as yup from "yup"; // TODO: Optimize yup import
   import axios from "axios";
+
+  const isSpinning = ref(false)
 
   const router = useRouter();
   const route = useRoute();
@@ -314,6 +318,7 @@
   };
 
   const register = () => {
+    isSpinning.value = true
     handleSubmit((data) => {
       axios.post("/api/register", data);
     })();
