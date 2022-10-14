@@ -190,12 +190,12 @@
     </div>
 
     <button
-      class="transition mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-6 text-white font-bold text-xl w-fit\"
+      class="transition mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-6 text-white font-bold text-xl w-fit"
       @click="register"
-      :class="{ 'bg-red-400': isSpinning }">
+      :class="{ 'bg-red-400': isSubmitting }">
       <svg
-        v-if="isSpinning"
-        class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+        v-if="isSubmitting"
+        class="animate-spin w-[76.73px] h-[27px] h-5 w-5 text-white"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24">
@@ -226,7 +226,7 @@
   import * as yup from "yup"; // TODO: Optimize yup import
   import axios from "axios";
 
-  const isSpinning = ref(false);
+  const isSubmitting = ref(false);
 
   const router = useRouter();
   const route = useRoute();
@@ -342,7 +342,10 @@
   };
 
   const register = () => {
-    isSpinning.value = true;
+    if (isSubmitting.value) return;
+
+    isSubmitting.value = true;
+
     handleSubmit((data) => {
       axios
         .post("/api/register", data)
