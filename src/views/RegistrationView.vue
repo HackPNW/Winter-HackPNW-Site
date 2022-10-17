@@ -305,11 +305,11 @@
           x
             .required()
             .matches(
-              /^[a-z\d ]*$/,
+              /^[a-z\d ]|[A-Z\d ]*$/,
               "Team name must only contain: letters, numbers and spaces"
             )
             .min(5)
-            .max(20),
+            .max(30),
       }),
     fillTeam: yup.bool().when("createTeam", {
       is: true,
@@ -351,6 +351,8 @@
         .post("/api/register", data)
         .then((res) => handleRegistered(res, data));
     })();
+
+    router.push("/register");
   };
 
   onMounted(() => {
