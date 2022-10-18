@@ -48,7 +48,7 @@ const formSchema = yup.object({
         x
           .required()
           .matches(
-            /^[a-z\d ]|[A-Z\d ]*$/,
+            /^[a-z\d ]*$/i,
             "Team name must only contain: letters, numbers and spaces"
           )
           .min(5)
