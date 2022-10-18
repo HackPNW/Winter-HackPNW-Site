@@ -19,7 +19,7 @@
     </div>
 
     <div class="flex flex-col mt-12 w-full max-w-xl gap-y-4 p-6">
-      <h1>Registration Complete!</h1>
+      <h1 class="">Registration Complete!</h1>
       <p>{{ inviteInfo.name }} {{ inviteInfo.code }} {{ hasInviteInfo }}</p>
     </div>
   </div>
