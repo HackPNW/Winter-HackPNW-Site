@@ -20,7 +20,6 @@
     <div class="h-full border-4 mx-6 border-black">
       <div class="h-full mx-6">
         <div class="flex flex-col justify-between p-4 md:p-10">
-          <div class="hidden md:flex-grow"></div>
           <div
             class="2xl:my-32 xl:my-24 md:my-12 flex justify-between items-center relative">
             <div>

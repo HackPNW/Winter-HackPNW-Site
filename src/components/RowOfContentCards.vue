@@ -5,7 +5,7 @@
       color="red-500"
       class="border-b-4 lg:border-b-0">
       <p class="text-lg px-2 my-4 font-semibold">
-        HackPNW is a 24 hour highschool hackathon
+        HackPNW is a two day hour highschool hackathon
         <a
           href="https://reactor-ext.azurewebsites.net/en-us/reactor/Location/Redmond"
           class="font-bold px-1 text-red-500 hover:cursor-pointer hover:bg-slate-200 hover:rounded-lg">
