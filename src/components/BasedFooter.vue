@@ -15,7 +15,7 @@
 
     <div class="text-center p-4 bg-slate-900">
       Made with love by the
-      <span class="text-red-500 font-bold">HackPNW team</span>
+      <span class="text-red-500 font-bold">HackPNW<span class="font-medium text-white text-sm">501(c)(3)</span> team</span>
     </div>
   </footer>
 </template>
