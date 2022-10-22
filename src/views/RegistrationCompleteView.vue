@@ -18,9 +18,18 @@
       <h1 class="font-semibold text-lg">Back to home</h1>
     </div>
 
-    <div class="flex flex-col mt-12 w-full max-w-xl gap-y-4 p-6">
-      <h1 class="">Registration Complete!</h1>
-      <p>{{ inviteInfo.name }} {{ inviteInfo.code }} {{ hasInviteInfo }}</p>
+    <div class="flex flex-col mt-12 w-full max-w-xl gap-y-8 p-6">
+      <h1
+        class="text-8xl font-bold poppins text-center underline decoration-4 decoration-red-500">
+        Registration Complete!
+      </h1>
+      <hr class="border-2 border-black border-slate-800" />
+      <div>
+        <h1 class="text-5xl text-center text-gray-800 font-semibold">
+          We have sent you a confirmation email with your team code and
+          registration info
+        </h1>
+      </div>
     </div>
   </div>
 </template>
