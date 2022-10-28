@@ -40,22 +40,12 @@
               <div class="bg-slate-200 p-8 rounded-xl">
                 <h1 class="text-6xl font-bold text-black">Emails:</h1>
                 <h1 class="pt-4">
-                  <span class="text-purple-500 font-bold">General</span> team:
+                  <span class="text-purple-500 font-bold">General</span>:
                   team@hackpnw.org
                 </h1>
                 <h1>
-                  Head of <span class="text-red-500 font-bold">outreach</span>:
-                  ted@hackpnw.org
-                </h1>
-                <h1>
-                  Head of
-                  <span class="text-amber-500 font-bold">planning</span>:
-                  keira@hackpnw.org
-                </h1>
-                <h1>
-                  Head of
-                  <span class="text-green-500 font-bold">sponsors</span>:
-                  will@hackpnw.org
+                  <span class="text-green-500 font-bold">Sponsors</span>:
+                  sponsors@hackpnw.org
                 </h1>
               </div>
 

@@ -34,31 +34,31 @@
       </div>
       <div class="flex justify-items-stretch gap-x-4">
         <form-input
-          text="First Name"
+          text="First Name*"
           placeholder="John"
           :required="true"
           v-model="formData.firstName" />
         <form-input
-          text="Last Name"
+          text="Last Name*"
           placeholder="Doe"
           :required="true"
           v-model="formData.lastName" />
       </div>
       <div>
         <form-input
-          text="Email"
+          text="Email*"
           placeholder="john.doe@example.com"
           :required="true"
           v-model="formData.email" />
       </div>
       <div class="flex gap-x-4">
         <form-input
-          text="High School"
+          text="High School*"
           placeholder="Hacker High School"
           :required="true"
           v-model="formData.school" />
         <selection-form-input
-          label="Grade"
+          label="Grade*"
           :options="gradeOptions"
           v-model="formData.grade"
           :required="true" />
@@ -120,7 +120,7 @@
         v-if="!formData.createTeam && !beenInvited" />
 
       <form-input
-        text="Team code"
+        text="Team code*"
         placeholder="1234-5678"
         v-if="formData.hasTeamCode && !formData.createTeam"
         v-model="formData.teamCode"

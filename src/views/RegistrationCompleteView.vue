@@ -20,7 +20,7 @@
 
     <div class="flex flex-col mt-12 w-full max-w-xl gap-y-8 p-6">
       <h1
-        class="text-8xl font-bold poppins text-center underline decoration-4 decoration-red-500">
+        class="text-8xl font-bold poppins text-center">
         Registration Complete!
       </h1>
       <hr class="border-2 border-black border-slate-800" />
