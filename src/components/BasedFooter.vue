@@ -5,9 +5,9 @@
         <p class="flex justify-center items-center">
           <span class="mr-4">Register for free!</span>
           <button
-            @click="goToRegistration"
-            class="transition rounded-full bg-red-500 hover:bg-red-400 py-2 px-5 text-white font-bold text-xl">
-            Register
+            @click=""
+            class="transition rounded-full bg-red-300 hover:bg-red-200 py-2 px-5 text-white font-bold text-xl">
+            Registration opens soon
           </button>
         </p>
       </div>

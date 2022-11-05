@@ -16,9 +16,9 @@
             </h1>
             <div class="flex-grow" id="about">
               <button
-                class="transition mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-10 text-white font-bold text-xl w-fit"
-                @click="goToRegistration">
-                Register
+                class="transition mt-8 rounded-full bg-red-300 hover:bg-red-200 py-3 px-10 text-white font-bold text-xl w-fit"
+                @click="">
+                Registration opens soon
               </button>
             </div>
           </div>

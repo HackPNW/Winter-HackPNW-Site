@@ -18,9 +18,9 @@
       </p>
       <div class="w-full my-6 text-center">
         <button
-          class="transition rounded-full bg-red-500 hover:bg-red-400 py-2 px-5 text-white font-bold text-xl"
-          @click="goToRegistration">
-          Register
+          class="transition rounded-full bg-red-300 hover:bg-red-200 py-2 px-5 text-white font-bold text-xl"
+          @click="">
+          Registration open soon
         </button>
       </div>
     </content-card>
