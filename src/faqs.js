@@ -38,7 +38,7 @@ const faqs = [
   ],
   [
     "When is HackPNW?",
-    "HackPNW is going to be on Febuary 4th - January 5th, at the Microsoft Redmond Reactor!",
+    "HackPNW is going to be on Febuary 4th - Febuary 5th, at the Microsoft Redmond Reactor!",
   ],
   [
     "Will there be tech talks and workshops?",
