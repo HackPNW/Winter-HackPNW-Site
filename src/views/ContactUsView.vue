@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen scroll-smooth items-center">
     <div
-      class="w-48 m-3 ml-6 flex self-start items-center text-red-500 px-4 py-2 mb-4 bg-gray-300 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
+    class="w-48 m-3 ml-6 flex self-start items-center text-[#238fa0] px-4 py-2 mb-4 bg-gray-300 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
       @click="goToHome">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@
             class="2xl:my-32 xl:my-24 md:my-12 flex flex-1 flex-col space-y-8 lg:flex-row lg:justify-between items-center relative">
             <div>
               <h1
-                class="mt-3 lg:text-9xl text-5xl md:8xl sm:text-8xl font-bold font-poppins flex-0 underline underline-offset-8 decoration-red-500">
+              class="mt-3 lg:text-9xl text-5xl md:8xl sm:text-8xl font-bold font-poppins flex-0 underline underline-offset-8 decoration-[#238fa0]">
                 Contact <br />
                 Us!
               </h1>
@@ -40,11 +40,11 @@
               <div class="bg-slate-200 md:p-8 p-4 rounded-xl">
                 <h1 class="lg:text-6xl md:text-5xl text-3xl font-bold text-black ">Emails:</h1>
                 <h1 class="pt-4">
-                  <span class="text-purple-500 font-bold">General</span>:
+                  <span class="text-cyan-500 font-bold">General</span>:
                   team@hackpnw.org
                 </h1>
                 <h1>
-                  <span class="text-green-500 font-bold">Sponsors</span>:
+                <span class="text-[#6bccce] font-bold">Sponsors</span>:
                   sponsors@hackpnw.org
                 </h1>
               </div>
@@ -61,7 +61,7 @@
                     rows="2"
                     placeholder="Hey there..." />
                   <button
-                    class="transition bg-red-500 hover:bg-red-400 rounded-md text-lg px-2 py-1 outline-0 text-white font-bold">
+                  class="transition bg-[#238fa0] hover:bg-[#79bcc6] rounded-md text-lg px-2 py-1 outline-0 text-white font-bold">
                     Send
                   </button>
                 </div>

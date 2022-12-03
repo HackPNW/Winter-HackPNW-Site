@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen scroll-smooth items-center">
+  <div class="min-h-screen scroll-smooth items-center bg-[#e7f0ed]">
     <nav-bar />
     <div class="h-full border-4 mx-6 border-black">
       <div
@@ -16,7 +16,7 @@
             </h1>
             <div class="flex-grow" id="about">
               <button
-                class="transition mt-8 rounded-full bg-red-300 hover:bg-red-200 py-3 px-10 text-white font-bold text-xl w-fit"
+              class="transition mt-8 rounded-full bg-[#79bcc6] hover:bg-[#aadbe2] py-3 px-10 text-white font-bold text-xl w-fit"
                 @click="">
                 Registration opens soon
               </button>
@@ -36,7 +36,7 @@
 
     <div id="faq" class="p-8">
       <h2
-        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-red-500 decoration-8 underline-offset-8">
+      class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-[#238fa0] decoration-8 underline-offset-8">
         Frequently Asked Questions
       </h2>
 
@@ -49,7 +49,7 @@
     </div>
     <div id="sponsors">
       <h2
-        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-amber-500 decoration-8 underline-offset-8">
+      class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-[#28baa9] decoration-8 underline-offset-8">
         Sponsors
       </h2>
 

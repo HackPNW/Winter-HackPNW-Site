@@ -6,7 +6,7 @@
           <span class="mr-4">Register for free!</span>
           <button
             @click=""
-            class="transition rounded-full bg-red-300 hover:bg-red-200 py-2 px-5 text-white font-bold text-xl">
+          class="transition rounded-full bg-[#79bcc6] hover:bg-[#aadbe2] py-2 px-5 text-white font-bold text-xl">
             Registration opens soon
           </button>
         </p>
@@ -15,7 +15,7 @@
 
     <div class="text-center p-4 bg-slate-900">
       Made with love by the
-      <span class="text-red-500 font-bold">HackPNW<span class="font-medium text-white text-sm">501(c)(3)</span> team</span>
+    <span class="text-[#238fa0] font-bold">HackPNW<span class="font-medium text-white text-sm">501(c)(3)</span> team</span>
     </div>
   </footer>
 </template>
