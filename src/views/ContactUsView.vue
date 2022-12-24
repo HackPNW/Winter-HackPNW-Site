@@ -60,7 +60,7 @@
                 <span class="font-bold">keira</span>@hackpnw.org
                 </h1>
                 <h1>
-                <span class="text-cyan-500 font-bold">Alex DeForrest</span>:
+                <span class="text-cyan-800 font-bold">Alex</span>:
                 <span class="font-bold">alex</span>@hackpnw.org
                 </h1>
               </div>
