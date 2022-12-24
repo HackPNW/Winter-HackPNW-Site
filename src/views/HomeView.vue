@@ -49,7 +49,7 @@
           <f-a-q-card v-for="faq in faqs" :question="faq[0]" :answer="faq[1]" />
         </div>
       </div>
-      <more-question-box />
+<!--      <more-question-box />-->
     </div>
     <div id="sponsors">
       <h2

@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen scroll-smooth items-center">
+<div class="min-h-screen scroll-smooth items-center bg-[#e7f0ed]">
     <div
     class="w-48 m-3 ml-6 flex self-start items-center text-[#238fa0] px-4 py-2 mb-4 bg-gray-300 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
       @click="goToHome">
@@ -17,7 +17,7 @@
       </svg>
       <h1 class="font-semibold text-lg">Back to home</h1>
     </div>
-    <div class="h-full border-4 mx-6 border-black">
+    <div class=" border-4 mx-6 border-black">
       <div class="h-full mx-6">
         <div class="flex flex-col justify-between p-4 md:p-10">
           <div
@@ -31,41 +31,53 @@
               <hr class="mt-12 h-12 border-t-8 border-black" />
               <div class="lg:w-[35.08rem]">
                 <h1 class="text-gray-700 ld xl:text-3xl">
-                  We'd love to answer any of your questions or inqueries
+                  We'd love to answer any of your questions
                 </h1>
               </div>
             </div>
             <div
               class="space-y-2 font-semibold md:text-2xl text-lg text-gray-700 xl:block">
-              <div class="bg-slate-200 md:p-8 p-4 rounded-xl">
+              <div class="bg-slate-100 md:p-8 p-4 rounded-xl shadow-xl">
                 <h1 class="lg:text-6xl md:text-5xl text-3xl font-bold text-black ">Emails:</h1>
                 <h1 class="pt-4">
                   <span class="text-cyan-500 font-bold">General</span>:
-                  team@hackpnw.org
+                    <span class="font-bold">team</span>@hackpnw.org
                 </h1>
                 <h1>
                 <span class="text-[#6bccce] font-bold">Sponsors</span>:
-                  sponsors@hackpnw.org
+                <span class="font-bold">sponsors</span>@hackpnw.org
+                </h1>
+                <h1>
+                <span class="text-cyan-800 font-bold">Will McDonald</span>:
+                <span class="font-bold">will</span>@hackpnw.org
+                </h1>
+                <h1>
+                <span class="text-cyan-500 font-bold">Ted Guan</span>:
+                <span class="font-bold">ted</span>@hackpnw.org
+                </h1>
+                <h1>
+                <span class="text-[#6bccce] font-bold">Keira</span>:
+                <span class="font-bold">keira</span>@hackpnw.org
                 </h1>
               </div>
 
-              <div class="md:p-8 p-4 rounded-xl bg-slate-200">
-                <div class="flex flex-col">
-                <p class="lg:text-4xl lg:pb-2 md:text-3xl text-xl text-black font-semibold">Email</p>
-                  <input
-                    class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-2 md:placeholder:text-lg placeholder:text-sm"
-                    placeholder="your-email@example.com" />
-                  <p class="lg:text-4xl lg:pb-2 md:pb-1 md:text-3xl text-xl text-black font-semibold">Message</p>
-                  <textarea
-                  class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-4 md:placeholder:text-lg placeholder:text-sm"
-                    rows="2"
-                    placeholder="Hey there..." />
-                  <button
-                  class="transition bg-[#238fa0] hover:bg-[#79bcc6] rounded-md text-lg px-2 py-1 outline-0 text-white font-bold">
-                    Send
-                  </button>
-                </div>
-              </div>
+<!--              <div class="md:p-8 p-4 rounded-xl bg-slate-200">-->
+<!--                <div class="flex flex-col">-->
+<!--                <p class="lg:text-4xl lg:pb-2 md:text-3xl text-xl text-black font-semibold">Email</p>-->
+<!--                  <input-->
+<!--                    class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-2 md:placeholder:text-lg placeholder:text-sm"-->
+<!--                    placeholder="your-email@example.com" />-->
+<!--                  <p class="lg:text-4xl lg:pb-2 md:pb-1 md:text-3xl text-xl text-black font-semibold">Message</p>-->
+<!--                  <textarea-->
+<!--                  class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-4 md:placeholder:text-lg placeholder:text-sm"-->
+<!--                    rows="2"-->
+<!--                    placeholder="Hey there..." />-->
+<!--                  <button-->
+<!--                  class="transition bg-[#238fa0] hover:bg-[#79bcc6] rounded-md text-lg px-2 py-1 outline-0 text-white font-bold">-->
+<!--                    Send-->
+<!--                  </button>-->
+<!--                </div>-->
+<!--              </div>-->
             </div>
           </div>
         </div>
@@ -73,6 +85,12 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+    div {
+        overflow: hidden;
+    }
+</style>
 
 <script setup>
   import { routerKey, useRouter } from "vue-router";
