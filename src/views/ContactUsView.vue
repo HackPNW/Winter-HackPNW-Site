@@ -59,6 +59,10 @@
                 <span class="text-[#6bccce] font-bold">Keira</span>:
                 <span class="font-bold">keira</span>@hackpnw.org
                 </h1>
+                <h1>
+                <span class="text-cyan-500 font-bold">Alex DeForrest</span>:
+                <span class="font-bold">alex</span>@hackpnw.org
+                </h1>
               </div>
 
 <!--              <div class="md:p-8 p-4 rounded-xl bg-slate-200">-->
