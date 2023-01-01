@@ -18,7 +18,7 @@ const faqs = [
   ],
   [
     "Will there be prizes?",
-    "Of course! There will be over $1000 worth of prizes to win and trust us when we say they will be worth your time.",
+    "Of course! There will be many prizes to win!",
   ],
   [
     "Is it over night?",
