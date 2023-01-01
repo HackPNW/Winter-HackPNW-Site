@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col w-full px-2 md:px-8 pt-4 pb-20 items-center bg-[#e7f0ed]">
     <div
-      class="flex self-start items-center text-red-500 px-4 py-2 mb-4 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
+    class="flex self-start items-center text-[#238fa0] px-4 py-2 mb-4 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
       @click="goToHome">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@
       <h1 class="font-semibold text-lg">Back to home</h1>
     </div>
     <h1
-      class="text-5xl font-bold font-poppins underline decoration-red-500 decoration-8 underline-offset-[12px]">
+    class="text-5xl font-bold font-poppins underline decoration-[#238fa0] decoration-8 underline-offset-[12px]">
       Register
     </h1>
     <div class="flex flex-col mt-12 w-full max-w-xl gap-y-4 p-6">
@@ -100,14 +100,14 @@
         v-if="!beenInvited">
         <button
           class="text-xl font-semibold px-2 py-1 rounded-md transition"
-          :class="formData.createTeam ? '' : 'bg-red-500 text-white shadow-lg'"
+        :class="formData.createTeam ? '' : 'bg-[#238fa0] text-white shadow-lg'"
           @click="formData.createTeam = false">
           Join a team
         </button>
         <p class="text-gray-600">or</p>
         <button
           class="text-xl font-semibold px-2 py-1 rounded-md transition"
-          :class="formData.createTeam ? 'bg-red-500 text-white shadow-lg' : ''"
+        :class="formData.createTeam ? 'bg-[#238fa0] text-white shadow-lg' : ''"
           @click="formData.createTeam = true">
           Create a team
         </button>
@@ -176,7 +176,7 @@
             ? 'bg-amber-200 ring-amber-500'
             : 'bg-green-300 ring-green-500'
         ">
-        <p class="text-lg font-bold">
+        <p class="text-lg font-bold py-1">
           {{
             errors.length
               ? "There are a couple issues you need to fix before you can register"
@@ -188,7 +188,7 @@
           information that will be displayed on your name tag and so we can
           contact you about the event!
         </p>
-        <ul>
+        <ul class="pb-2">
           <li v-for="error in errors">
             {{ error }}
           </li>
