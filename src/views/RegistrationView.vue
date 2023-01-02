@@ -365,6 +365,7 @@
   };
 
   const register = () => {
+  //Handle backend sumbisions
     if (isSubmitting.value) return;
 
     isSubmitting.value = true;
@@ -374,7 +375,7 @@
         .post("/api/register", data)
         .then((res) => handleRegistered(res, data));
     })();
-
+  
     router.push("/register");
   };
 
