@@ -2,7 +2,7 @@
   <div
     class="flex flex-col w-full px-2 md:px-8 pt-4 pb-20 items-center bg-[#e7f0ed]">
     <div
-      class="flex self-start items-center text-[#238fa0] px-4 py-2 mb-4 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
+      class="flex self-start items-center text-[#238fa0] px-4 py-2 mb-4 bg-gray-300 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
       @click="goToHome">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@
 
       <div
         v-if="beenInvited"
-        class="ring-2 rounded-md px-2 text-gray-700 font-semibold bg-green-300 ring-green-500">
+        class="ring-2 rounded-md px-2 py-1 text-gray-700 font-semibold bg-green-300 ring-green-500">
         Hey there! <br />
         <span class="font-bold">{{ inviteInfo.name }}</span> has invited you to
         join their team! <br />
@@ -136,7 +136,8 @@
         placeholder="1234-5678"
         v-if="formData.hasTeamCode && !formData.createTeam"
         v-model="formData.teamCode"
-        :disabled="beenInvited">
+        :disabled="beenInvited"
+        @input="teamCodeInput">
         <p class="mt-1 text-gray-500 text-sm" v-if="beenInvited">
           Don't worry, we've filled in the team code for you!
         </p>
@@ -262,6 +263,14 @@
       ret[x] = registerFunction(x);
     });
     return reactive(ret);
+  };
+
+  const teamCodeInput = (e) => {
+    if (e.data == null) return;
+
+    if (formData.teamCode.length === 4) {
+      formData.teamCode += "-";
+    }
   };
 
   const formFields = {
