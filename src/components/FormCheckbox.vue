@@ -2,7 +2,7 @@
   <div class="flex">
     <div
       class="h-6 w-6 rounded-full mr-2 p-1 cursor-pointer"
-    :class="checked ? 'bg-[#238fa0]' : 'bg-gray-300'">
+      :class="checked ? 'bg-[#238fa0]' : 'bg-gray-300'">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

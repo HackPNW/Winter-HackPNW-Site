@@ -1,5 +1,5 @@
 <template>
-<nav class="bg-[#FFFDF9] py-3 scroll-smooth bg-[#e7f0ed]">
+  <nav class="bg-[#FFFDF9] py-3 scroll-smooth bg-[#e7f0ed]">
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -79,7 +79,7 @@
           <div class="flex hidden sm:inline align-middle">
             <button
               @click=""
-            class="bg-[#79bcc6] text-white font-semibold hover:bg-[#aadbe2] hover:text-white px-4 py-2 rounded-full text-sm">
+              class="bg-[#79bcc6] text-white font-semibold hover:bg-[#aadbe2] hover:text-white px-4 py-2 rounded-full text-sm">
               REGISTER SOON
             </button>
           </div>
@@ -129,7 +129,7 @@
   .link-underline {
     border-bottom-width: 0;
     background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#79bcc6, #79bcc6);
+      linear-gradient(#79bcc6, #79bcc6);
     background-size: 0 3px;
     background-position: 0 100%;
     background-repeat: no-repeat;

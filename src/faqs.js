@@ -16,10 +16,7 @@ const faqs = [
     "How many events are there?",
     "There is a main team challenge along with a side competition for comptetive programming. To break up the hacking, each day there will be one fun event!",
   ],
-  [
-    "Will there be prizes?",
-    "Of course! There will be many prizes to win!",
-  ],
+  ["Will there be prizes?", "Of course! There will be many prizes to win!"],
   [
     "Is it over night?",
     "Unfortunately due to both covid and space restrictions there will be a break during the night.",

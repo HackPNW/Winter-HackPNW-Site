@@ -16,14 +16,14 @@
             </h1>
             <div class="flex-grow space-x-4" id="about">
               <button
-              class="transition mt-8 rounded-full bg-[#79bcc6] hover:bg-[#aadbe2] py-3 px-10 text-white font-bold text-xl w-fit"
+                class="transition mt-8 rounded-full bg-[#79bcc6] hover:bg-[#aadbe2] py-3 px-10 text-white font-bold text-xl w-fit"
                 @click="">
                 Registration opens soon
               </button>
-            <button
-                class="transition mt-8 rounded-full bg-[#238fa0] hover:bg-[#aadbe2] py-3 px-10 text-white font-bold text-xl w-fit"
-            > <a href = "https://forms.gle/ZjdfvKdqT4MBjYKn8"> RSVP Here! </a>
-            </button>
+              <button
+                class="transition mt-8 rounded-full bg-[#238fa0] hover:bg-[#aadbe2] py-3 px-10 text-white font-bold text-xl w-fit">
+                <a href="https://forms.gle/ZjdfvKdqT4MBjYKn8"> RSVP Here! </a>
+              </button>
             </div>
           </div>
           <div>
@@ -40,7 +40,7 @@
 
     <div id="faq" class="p-8">
       <h2
-      class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-[#238fa0] decoration-8 underline-offset-8">
+        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-[#238fa0] decoration-8 underline-offset-8">
         Frequently Asked Questions
       </h2>
 
@@ -49,11 +49,11 @@
           <f-a-q-card v-for="faq in faqs" :question="faq[0]" :answer="faq[1]" />
         </div>
       </div>
-<!--      <more-question-box />-->
+      <!--      <more-question-box />-->
     </div>
     <div id="sponsors">
       <h2
-      class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-[#28baa9] decoration-8 underline-offset-8">
+        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-[#28baa9] decoration-8 underline-offset-8">
         Sponsors
       </h2>
 

@@ -3,7 +3,7 @@
     <summary
       @click="isActive = !isActive"
       :class="{ 'rounded-t-xl': isActive, 'rounded-xl': !isActive }"
-    class="decoration-0 justify-between p-6 text-white w-full h-full bg-[#238fa0] text-2xl cursor-pointer font-bold">
+      class="decoration-0 justify-between p-6 text-white w-full h-full bg-[#238fa0] text-2xl cursor-pointer font-bold">
       Still have questions? Send us a message!
       <svg
         :class="{ 'rotate-180': isActive }"
@@ -31,7 +31,7 @@
         rows="2"
         placeholder="Hey there..." />
       <button
-      class="transition bg-[#238fa0] hover:bg-[#79bcc6] rounded-md text-lg px-2 py-1 outline-0 text-white font-bold">
+        class="transition bg-[#238fa0] hover:bg-[#79bcc6] rounded-md text-lg px-2 py-1 outline-0 text-white font-bold">
         Send
       </button>
     </div>

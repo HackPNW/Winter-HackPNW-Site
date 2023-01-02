@@ -1,7 +1,7 @@
 <template>
-<div class="min-h-screen scroll-smooth items-center bg-[#e7f0ed]">
+  <div class="min-h-screen scroll-smooth items-center bg-[#e7f0ed]">
     <div
-    class="w-48 m-3 ml-6 flex self-start items-center text-[#238fa0] px-4 py-2 mb-4 bg-gray-300 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
+      class="w-48 m-3 ml-6 flex self-start items-center text-[#238fa0] px-4 py-2 mb-4 bg-gray-300 bg-opacity-0 hover:bg-opacity-70 rounded-lg transition cursor-pointer"
       @click="goToHome">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -17,14 +17,14 @@
       </svg>
       <h1 class="font-semibold text-lg">Back to home</h1>
     </div>
-    <div class=" border-4 mx-6 border-black">
+    <div class="border-4 mx-6 border-black">
       <div class="h-full mx-6">
         <div class="flex flex-col justify-between p-4 md:p-10">
           <div
             class="2xl:my-32 xl:my-24 md:my-12 flex flex-1 flex-col space-y-8 lg:flex-row lg:justify-between items-center relative">
             <div>
               <h1
-              class="mt-3 lg:text-9xl text-5xl md:8xl sm:text-8xl font-bold font-poppins flex-0 underline underline-offset-8 decoration-[#238fa0]">
+                class="mt-3 lg:text-9xl text-5xl md:8xl sm:text-8xl font-bold font-poppins flex-0 underline underline-offset-8 decoration-[#238fa0]">
                 Contact <br />
                 Us!
               </h1>
@@ -38,50 +38,53 @@
             <div
               class="space-y-2 font-semibold md:text-2xl text-lg text-gray-700 xl:block">
               <div class="bg-slate-100 md:p-8 p-4 rounded-xl shadow-xl">
-                <h1 class="lg:text-6xl md:text-5xl text-3xl font-bold text-black ">Emails:</h1>
+                <h1
+                  class="lg:text-6xl md:text-5xl text-3xl font-bold text-black">
+                  Emails:
+                </h1>
                 <h1 class="pt-4">
                   <span class="text-cyan-500 font-bold">General</span>:
-                    <span class="font-bold">team</span>@hackpnw.org
+                  <span class="font-bold">team</span>@hackpnw.org
                 </h1>
                 <h1>
-                <span class="text-[#6bccce] font-bold">Sponsors</span>:
-                <span class="font-bold">sponsors</span>@hackpnw.org
+                  <span class="text-[#6bccce] font-bold">Sponsors</span>:
+                  <span class="font-bold">sponsors</span>@hackpnw.org
                 </h1>
                 <h1>
-                <span class="text-cyan-800 font-bold">Will McDonald</span>:
-                <span class="font-bold">will</span>@hackpnw.org
+                  <span class="text-cyan-800 font-bold">Will McDonald</span>:
+                  <span class="font-bold">will</span>@hackpnw.org
                 </h1>
                 <h1>
-                <span class="text-cyan-500 font-bold">Ted Guan</span>:
-                <span class="font-bold">ted</span>@hackpnw.org
+                  <span class="text-cyan-500 font-bold">Ted Guan</span>:
+                  <span class="font-bold">ted</span>@hackpnw.org
                 </h1>
                 <h1>
-                <span class="text-[#6bccce] font-bold">Keira</span>:
-                <span class="font-bold">keira</span>@hackpnw.org
+                  <span class="text-[#6bccce] font-bold">Keira</span>:
+                  <span class="font-bold">keira</span>@hackpnw.org
                 </h1>
                 <h1>
-                <span class="text-cyan-800 font-bold">Alex</span>:
-                <span class="font-bold">alex</span>@hackpnw.org
+                  <span class="text-cyan-800 font-bold">Alex</span>:
+                  <span class="font-bold">alex</span>@hackpnw.org
                 </h1>
               </div>
 
-<!--              <div class="md:p-8 p-4 rounded-xl bg-slate-200">-->
-<!--                <div class="flex flex-col">-->
-<!--                <p class="lg:text-4xl lg:pb-2 md:text-3xl text-xl text-black font-semibold">Email</p>-->
-<!--                  <input-->
-<!--                    class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-2 md:placeholder:text-lg placeholder:text-sm"-->
-<!--                    placeholder="your-email@example.com" />-->
-<!--                  <p class="lg:text-4xl lg:pb-2 md:pb-1 md:text-3xl text-xl text-black font-semibold">Message</p>-->
-<!--                  <textarea-->
-<!--                  class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-4 md:placeholder:text-lg placeholder:text-sm"-->
-<!--                    rows="2"-->
-<!--                    placeholder="Hey there..." />-->
-<!--                  <button-->
-<!--                  class="transition bg-[#238fa0] hover:bg-[#79bcc6] rounded-md text-lg px-2 py-1 outline-0 text-white font-bold">-->
-<!--                    Send-->
-<!--                  </button>-->
-<!--                </div>-->
-<!--              </div>-->
+              <!--              <div class="md:p-8 p-4 rounded-xl bg-slate-200">-->
+              <!--                <div class="flex flex-col">-->
+              <!--                <p class="lg:text-4xl lg:pb-2 md:text-3xl text-xl text-black font-semibold">Email</p>-->
+              <!--                  <input-->
+              <!--                    class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-2 md:placeholder:text-lg placeholder:text-sm"-->
+              <!--                    placeholder="your-email@example.com" />-->
+              <!--                  <p class="lg:text-4xl lg:pb-2 md:pb-1 md:text-3xl text-xl text-black font-semibold">Message</p>-->
+              <!--                  <textarea-->
+              <!--                  class="px-2 py-1 text-lg bg-gray-100 rounded-md outline-0 mb-4 md:placeholder:text-lg placeholder:text-sm"-->
+              <!--                    rows="2"-->
+              <!--                    placeholder="Hey there..." />-->
+              <!--                  <button-->
+              <!--                  class="transition bg-[#238fa0] hover:bg-[#79bcc6] rounded-md text-lg px-2 py-1 outline-0 text-white font-bold">-->
+              <!--                    Send-->
+              <!--                  </button>-->
+              <!--                </div>-->
+              <!--              </div>-->
             </div>
           </div>
         </div>
@@ -91,9 +94,9 @@
 </template>
 
 <style scoped>
-    div {
-        overflow: hidden;
-    }
+  div {
+    overflow: hidden;
+  }
 </style>
 
 <script setup>
