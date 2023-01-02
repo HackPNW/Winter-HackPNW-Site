@@ -19,16 +19,27 @@
     </div>
 
     <div class="flex flex-col mt-12 w-full max-w-xl gap-y-8 p-6">
-      <h1 class="text-8xl font-bold poppins text-center">
+      <h1 class="text-4xl font-bold poppins text-center">
         Registration Complete!
       </h1>
       <hr class="border-2 border-black border-slate-800" />
       <div>
-        <h1 class="text-5xl text-center text-gray-800 font-semibold">
+        <h1 class="text-2xl text-center text-gray-800 font-semibold">
           We have sent you a confirmation email with your team code and
           registration info
         </h1>
       </div>
+    </div>
+
+    <div class="mt-6 text-center" v-if="hasInviteInfo">
+      <h2 class="text-2xl">
+        Send this link to invite people to join your HackPNW team!
+      </h2>
+      <p class="text-[#238fa0] font-bold text-lg p-2">{{ inviteLink() }}</p>
+      <h2 class="text-2xl mt-4">
+        Alternatively, you can just send the team code below
+      </h2>
+      <p class="text-[#238fa0] font-bold text-lg p-2">{{ inviteInfo.code }}</p>
     </div>
   </div>
 </template>
@@ -47,6 +58,9 @@
   const hasInviteInfo = computed(() => {
     return Boolean(inviteInfo.name && inviteInfo.code);
   });
+  const inviteLink = () => {
+    return `https://hackpnw.org/register?c=${inviteInfo.code}&i=${inviteInfo.name}`;
+  };
 
   const goToHome = () => {
     router.push("/");
