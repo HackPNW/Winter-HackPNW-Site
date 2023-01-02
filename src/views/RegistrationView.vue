@@ -277,6 +277,7 @@
     teamCode: "",
     teamName: "",
     fillTeam: true,
+    restrictions: ""
   };
 
   const formSchema = yup.object({
@@ -327,6 +328,7 @@
       is: true,
       then: (x) => x.required(),
     }),
+    restrictions: yup.string()
   });
 
   const {

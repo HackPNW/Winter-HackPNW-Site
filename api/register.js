@@ -58,6 +58,7 @@ const formSchema = yup.object({
     is: true,
     then: (x) => x.required(),
   }),
+  restrictions: yup.string()
 });
 
 async function createTeam(teamName, db) {
