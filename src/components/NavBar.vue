@@ -117,7 +117,7 @@
 
         <router-link
           to=""
-          class="text-white bg-red-300 hover:bg-red-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          class="text-white bg-[#79bcc6] hover:bg-red-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >Register soon</router-link
         >
       </div>
