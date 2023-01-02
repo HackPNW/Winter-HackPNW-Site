@@ -1,7 +1,7 @@
 const yup = require("yup");
 const _ = require("lodash");
 const { MongoClient } = require("mongodb");
-const { axios } = require("axios");
+import axios, { AxiosRequestConfig, AxiosPromise, AxiosResponse } from 'axios';
 
 const url = process.env.MONGO_URL;
 const client = new MongoClient(url);
