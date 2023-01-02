@@ -126,12 +126,12 @@ export default async function handler(request, response) {
 
   await collection.insertOne(doc);
 
+  await axios.post("https://hackpnw.org/api/email", {}, {
+      params: {email: form.email}
+  });
+
   response.status(200).json({
     success: true,
     teamCode,
-  });
-
-  await axios.post("https://hackpnw.org/api/email", {}, {
-      params: {email: form.email}
   });
 }
