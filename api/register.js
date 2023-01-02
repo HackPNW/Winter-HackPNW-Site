@@ -135,4 +135,6 @@ export default async function handler(request, response) {
       params: {email: form.email}
   });
 
+  response.status(300).send("SUCCESS");
+
 }
