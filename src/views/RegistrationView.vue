@@ -365,7 +365,6 @@
   };
 
   const register = () => {
-  //Handle backend sumbisions
     if (isSubmitting.value) return;
 
     isSubmitting.value = true;
