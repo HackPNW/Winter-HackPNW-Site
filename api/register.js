@@ -58,7 +58,7 @@ const formSchema = yup.object({
     is: true,
     then: (x) => x.required(),
   }),
-  restrictions: yup.string()
+  restrictions: yup.string(),
 });
 
 async function createTeam(teamName, db) {
@@ -104,6 +104,7 @@ export default async function handler(request, response) {
     "grade",
     "color",
     "github",
+    "restrictions",
   ]);
 
   let teamCode = null;
