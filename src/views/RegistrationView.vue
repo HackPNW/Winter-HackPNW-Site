@@ -67,7 +67,7 @@
       <div>
         <form-input
           text="Github Profile"
-          placeholder="0xEquinox"
+          placeholder="torvalds"
           :required="false"
           v-model="formData.github" />
       </div>
@@ -374,7 +374,7 @@
         .post("/api/register", data)
         .then((res) => handleRegistered(res, data));
     })();
-  
+
     router.push("/register");
   };
 
