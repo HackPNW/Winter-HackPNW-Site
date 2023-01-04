@@ -1,8 +1,6 @@
 const yup = require("yup");
 const _ = require("lodash");
 const { MongoClient } = require("mongodb");
-const axios = require("axios");
-const { AxiosRequestConfig, AxiosPromise, AxiosResponse } = require('axios');
 const nodemailer = require("nodemailer");
 
 const url = process.env.MONGO_URL;
