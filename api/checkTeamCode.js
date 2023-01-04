@@ -17,10 +17,10 @@ export default async function handler(request, response) {
 
   await client.connect();
   const db = client.db(dbName);
-  const collection = db.collection("teams");
+  const teamCollection = db.collection("teams");
   const registrationsCollection = db.collection("registrations");
 
-  const res = await collection.findOne({ code: teamCode });
+  const res = await teamCollection.findOne({ code: teamCode });
   if (res == null) {
     return response
       .status(200)
