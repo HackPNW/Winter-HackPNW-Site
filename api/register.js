@@ -3,6 +3,7 @@ const _ = require("lodash");
 const { MongoClient } = require("mongodb");
 const axios = require("axios");
 const { AxiosRequestConfig, AxiosPromise, AxiosResponse } = require('axios');
+const nodemailer = require("nodemailer");
 
 const url = process.env.MONGO_URL;
 const client = new MongoClient(url);
@@ -127,15 +128,37 @@ export default async function handler(request, response) {
 
   await collection.insertOne(doc);
 
+  await sendEmail(form.email);
+
   response.status(200).json({
     success: true,
     teamCode,
   });
+}
 
-  await axios.post("https://hackpnw.org/api/email", {}, {
-      params: {email: form.email}
+async function sendEmail(recipientEmail) {
+  let senderEmail = process.env.EMAIL_USER;
+  let messageText = "This is a test! I Hope it worked";
+  let messageHTML = "<p>This is a test! I Hope it worked</p>";
+  let subject = "HackPNW Confirmation!"
+
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false, // upgrade later with STARTTLS
+    auth: {
+      user: senderEmail,
+      pass: process.env.EMAIL_PASSWORD,
+    },
   });
 
-  response.status(300).send("SUCCESS");
+  const message = {
+    from: senderEmail,
+    to: recipientEmail,
+    subject: subject,
+    text: messageText,
+    html: messageHTML,
+  }
 
+  await transporter.sendMail(message);
 }

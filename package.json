@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.2.0",
-    "axios": "^1.1.2",
+    "axios": "^1.2.2",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "mongodb": "^4.10.0",
