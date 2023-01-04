@@ -138,7 +138,7 @@ async function sendEmail(recipientEmail) {
   let senderEmail = process.env.EMAIL_USER;
   let messageText = "This is a test! I Hope it worked";
   let messageHTML = "<p>This is a test! I Hope it worked</p>";
-  let subject = "HackPNW Confirmation!"
+  let subject = "HackPNW Confirmation!";
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -156,7 +156,7 @@ async function sendEmail(recipientEmail) {
     subject: subject,
     text: messageText,
     html: messageHTML,
-  }
+  };
 
   await transporter.sendMail(message);
 }

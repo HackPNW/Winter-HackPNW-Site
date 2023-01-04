@@ -22,17 +22,19 @@ export default async function handler(request, response) {
 
   const res = await collection.findOne({ code: teamCode });
   if (res == null) {
-    return response.status(200).json({ valid: false });
+    return response
+      .status(200)
+      .json({ valid: false, reason: "Team code does not exist" });
   }
 
   const teamId = teamCollection.findOne({ code: teamCode })._id;
   console.log(teamId);
   if (
-    (await registrationsCollection.find({ teamId: teamId }).toArray().length) >=
+    (await registrationsCollection.find({ teamId: teamId }).toArray()).length >=
     4
   ) {
-    return response.status(400).body("Max people reached");
+    return response.status(200).json({ valid: false, reason: "Team is full" });
   }
 
-  response.status(200).json({ valid: true });
+  response.status(200).json({ valid: true, reason: "" });
 }
