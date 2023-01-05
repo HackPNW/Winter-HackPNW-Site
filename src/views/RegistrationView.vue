@@ -79,7 +79,7 @@
           v-model="formData.restrictions" />
       </div>
       <p class="text-gray-700 text-sm font-bold mb-2">
-        Pick your favorite color
+        Pick your favorite color*
       </p>
       <div class="flex gap-2 sm:gap-6">
         <button
@@ -203,9 +203,9 @@
     </div>
 
     <button
-      class="transition mt-8 rounded-full bg-red-500 hover:bg-red-400 py-3 px-6 text-white font-bold text-xl w-fit"
+      class="transition mt-8 rounded-full bg-red-500 py-3 px-6 text-white font-bold text-xl w-fit"
       @click="register"
-      :class="{ 'bg-red-400': isSubmitting }">
+      :class="{ 'bg-red-400': isSubmitting, 'bg-red-200': errors.length != 0, 'hover:bg-red-400': errors.length == 0 }">
       <svg
         v-if="isSubmitting"
         class="animate-spin w-[76.73px] h-[27px] h-5 w-5 text-white"
@@ -364,7 +364,12 @@
     });
   };
 
+  const invalidTeamCode = () => {
+
+  }
+
   const register = () => {
+    if (errors.value.length != 0) return;
     if (isSubmitting.value) return;
 
     isSubmitting.value = true;
@@ -372,7 +377,8 @@
     handleSubmit((data) => {
       axios
         .post("/api/register", data)
-        .then((res) => handleRegistered(res, data));
+        .then((res) => handleRegistered(res, data))
+        .catch(invalidTeamCode);
     })();
 
     router.push("/register");
