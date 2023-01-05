@@ -331,7 +331,7 @@
               "Team name must only contain: letters, numbers and spaces"
             )
             .min(5)
-            .max(30),
+            .max(20),
       }),
     fillTeam: yup.bool().when("createTeam", {
       is: true,
