@@ -66,9 +66,10 @@ async function createTeam(teamName, db) {
   const collection = db.collection("teams");
 
   let duplicate = "empty";
+  let code = "";
 
   while (duplicate != null) {
-      let code = Math.floor(Math.random() * 1_0000_0000).toString().padStart(8, "0");
+      code = Math.floor(Math.random() * 1_0000_0000).toString().padStart(8, "0");
       code = code.slice(0, 4) + "-" + code.slice(4, 8);
 
       duplicate = await db
