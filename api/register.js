@@ -126,7 +126,8 @@ export default async function handler(request, response) {
 
   await collection.insertOne(doc);
 
-  if (form.teamName != undefined && form.teamCode != undefined) await sendEmail(form.email, "Team Name: " + form.teamName, "Invite Code: " + teamCode, "Registration Info");
+  if (teamCode != null)
+      await sendEmail(form.email, "Team Name: " + form.teamName, "Invite Code: " + teamCode, "Registration Info");
   else await sendEmail(form.email, " ", " ", " ");
 
   response.status(200).json({
