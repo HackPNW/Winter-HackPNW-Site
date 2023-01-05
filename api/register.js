@@ -124,9 +124,8 @@ export default async function handler(request, response) {
     doc.teamId = null;
   }
 
-  await collection.insertOne(doc);
-
-  await sendEmail(form.email, form.teamName, form.teamCode);
+  if (form.teamName != undefined) await sendEmail(form.email, "Team Name: " + form.teamName, teamCode);
+  else await sendEmail(form.email, "", form.teamCode);
 
   response.status(200).json({
     success: true,
@@ -397,7 +396,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
       <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Raleway',sans-serif;" align="left">
 
   <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%; text-align: center;">Team Name: ${team}</p>
+    <p style="font-size: 14px; line-height: 140%; text-align: center;">${team}</p>
   </div>
 
       </td>
