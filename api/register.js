@@ -65,8 +65,17 @@ const formSchema = yup.object({
 async function createTeam(teamName, db) {
   const collection = db.collection("teams");
 
-  let code = Math.floor(Math.random() * 1_0000_0000).toString().padStart(8, "0");
-  code = code.slice(0, 4) + "-" + code.slice(4, 8);
+  let duplicate = "empty";
+
+  while (duplicate != null) {
+      let code = Math.floor(Math.random() * 1_0000_0000).toString().padStart(8, "0");
+      code = code.slice(0, 4) + "-" + code.slice(4, 8);
+
+      duplicate = await db
+        .collection("teams")
+        .findOne({ code: code });
+  }
+
 
   const doc = {
     name: teamName,
