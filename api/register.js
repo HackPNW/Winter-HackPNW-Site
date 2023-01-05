@@ -134,7 +134,7 @@ export default async function handler(request, response) {
   });
 }
 
-async function sendEmail(recipientEmail) {
+async function sendEmail(recipientEmail, team, code) {
   let senderEmail = process.env.EMAIL_USER;
   let messageText = "hank you for registering for Hack PNW! We have successfully received your registration and cannot wait to see you there! Be sure to keep an eye on your email as we will be sending out important updates about the event to you!";
   let messageHTML = `<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -397,7 +397,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
       <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Raleway',sans-serif;" align="left">
 
   <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%; text-align: center;">Team Name: ${team.name}</p>
+    <p style="font-size: 14px; line-height: 140%; text-align: center;">Team Name: ${team}</p>
   </div>
 
       </td>
