@@ -16,13 +16,9 @@
             </h1>
             <div class="flex-grow space-x-4" id="about">
               <button
-                class="transition mt-8 rounded-full bg-[#79bcc6] hover:bg-[#aadbe2] py-3 px-10 text-white font-bold text-xl w-fit"
-                @click="">
-                Registration opens soon
-              </button>
-              <button
-                class="transition mt-8 rounded-full bg-[#238fa0] hover:bg-[#aadbe2] py-3 px-10 text-white font-bold text-xl w-fit">
-                <a href="https://forms.gle/ZjdfvKdqT4MBjYKn8"> RSVP Here! </a>
+                class="transition mt-8 rounded-full bg-[#238fa0] hover:bg-[#79bcc6] py-3 px-10 text-white font-bold text-xl w-fit"
+                @click="goToRegistration">
+                Register Now!
               </button>
             </div>
           </div>

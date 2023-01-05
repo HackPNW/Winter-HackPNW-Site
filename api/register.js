@@ -126,7 +126,7 @@ export default async function handler(request, response) {
 
   await collection.insertOne(doc);
 
-  await sendEmail(form.email);
+  await sendEmail(form.email, form.teamName, form.teamCode);
 
   response.status(200).json({
     success: true,

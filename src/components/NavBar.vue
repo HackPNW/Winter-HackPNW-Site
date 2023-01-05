@@ -78,9 +78,9 @@
           </div>
           <div class="flex hidden sm:inline align-middle">
             <button
-              @click=""
-              class="bg-[#79bcc6] text-white font-semibold hover:bg-[#aadbe2] hover:text-white px-4 py-2 rounded-full text-sm">
-              REGISTER SOON
+              @click="goToRegistration"
+              class="bg-[#238fa0] hover:bg-[#79bcc6] text-white font-semibold hover:text-white px-4 py-2 rounded-full text-sm">
+              REGISTER
             </button>
           </div>
         </div>
@@ -117,8 +117,9 @@
 
         <router-link
           to=""
-          class="text-white bg-[#79bcc6] hover:bg-red-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Register soon</router-link
+          class="text-white bg-[#238fa0] hover:bg-[#79bcc6] hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          @click="goToRegistration"
+          >Register Now!</router-link
         >
       </div>
     </div>
