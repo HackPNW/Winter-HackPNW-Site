@@ -365,7 +365,7 @@
   };
 
   const invalidTeamCode = () => {
-
+    alert("Something went wrong, please try again!");
   }
 
   const register = () => {
