@@ -385,7 +385,9 @@
 
   const registrationError = (e) => {
     isSubmitting.value = false;
-    alert(`Something went wrong, please try again :(\n\nError: ${e}`);
+    alert(
+      `Something went wrong, please try again :(\n\nError: ${e.response.data}`
+    );
   };
 
   const register = () => {
