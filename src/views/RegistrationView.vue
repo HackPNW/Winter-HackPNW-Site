@@ -383,9 +383,9 @@
     });
   };
 
-  const registrationError = () => {
+  const registrationError = (e) => {
     isSubmitting.value = false;
-    alert("Something went wrong, please try again!");
+    alert(`Something went wrong, please try again :(\n\nError: ${e}`);
   };
 
   const register = () => {
