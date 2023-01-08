@@ -2,6 +2,9 @@ const yup = require("yup");
 const _ = require("lodash");
 const { MongoClient } = require("mongodb");
 const nodemailer = require("nodemailer");
+const Turnstile = require("cf-turnstile");
+
+const turnstile = Turnstile(process.env.TURNSTILE_KEY);
 
 const url = process.env.MONGO_URL;
 const client = new MongoClient(url);
@@ -96,6 +99,16 @@ export default async function handler(request, response) {
   // Checks
   let form = request.body;
   console.log(form);
+
+  const turnstileResult = await turnstile(form.tsToken, {
+    remoteip: request.headers["x-forwarded-for"],
+  });
+  if (!turnstileResult.success) {
+    return response
+      .status(400)
+      .send("Invalid token.\nPlease try submitting again.");
+  }
+
   try {
     form = await formSchema.validate(form);
   } catch (e) {
@@ -121,7 +134,12 @@ export default async function handler(request, response) {
 
   let teamCode = null;
   if (form.createTeam) {
-    const teamDoc = await createTeam(form.teamName, form.firstName + " " + form.lastName, form.fillTeam, db);
+    const teamDoc = await createTeam(
+      form.teamName,
+      form.firstName + " " + form.lastName,
+      form.fillTeam,
+      db
+    );
     console.log(teamDoc);
     doc.teamId = teamDoc._id;
     teamCode = teamDoc.code;
@@ -132,7 +150,12 @@ export default async function handler(request, response) {
     if (!teamDoc) return response.status(400).send("Not valid team code");
     doc.teamId = teamDoc._id;
 
-    const sizeOfTeam = (await db.collection("registrations").find({ teamId: doc.teamId }).toArray()).length;
+    const sizeOfTeam = (
+      await db
+        .collection("registrations")
+        .find({ teamId: doc.teamId })
+        .toArray()
+    ).length;
 
     if (sizeOfTeam >= 4) return response.status(400).send("Team is full");
   } else {
