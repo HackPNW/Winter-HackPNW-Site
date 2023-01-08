@@ -131,6 +131,10 @@ export default async function handler(request, response) {
       .findOne({ code: form.teamCode });
     if (!teamDoc) return response.status(400).send("Not valid team code");
     doc.teamId = teamDoc._id;
+
+    const sizeOfTeam = (await db.collection("registrations").find({ teamId: doc.teamId }).toArray()).length;
+
+    if (sizeOfTeam >= 4) return response.status(400).send("Team is full");
   } else {
     doc.teamId = null;
   }
