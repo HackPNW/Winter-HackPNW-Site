@@ -62,7 +62,7 @@ const formSchema = yup.object({
   restrictions: yup.string(),
 });
 
-async function createTeam(teamName, db) {
+async function createTeam(teamName, creatorName, db) {
   const collection = db.collection("teams");
 
   let duplicate = "empty";
@@ -80,6 +80,7 @@ async function createTeam(teamName, db) {
 
   const doc = {
     name: teamName,
+    creatorName: creatorName,
     code,
   };
 
@@ -120,7 +121,7 @@ export default async function handler(request, response) {
 
   let teamCode = null;
   if (form.createTeam) {
-    const teamDoc = await createTeam(form.teamName, db);
+    const teamDoc = await createTeam(form.teamName, form.firstName + " " + form.lastName, db);
     console.log(teamDoc);
     doc.teamId = teamDoc._id;
     teamCode = teamDoc.code;
