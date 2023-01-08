@@ -205,7 +205,11 @@
     <button
       class="transition mt-8 rounded-full bg-red-500 py-3 px-6 text-white font-bold text-xl w-fit"
       @click="register"
-      :class="{ 'bg-red-400': isSubmitting, 'bg-red-200': errors.length != 0, 'hover:bg-red-400': errors.length == 0 }">
+      :class="{
+        'bg-red-400': isSubmitting,
+        'bg-red-200': errors.length != 0,
+        'hover:bg-red-400': errors.length == 0,
+      }">
       <svg
         v-if="isSubmitting"
         class="animate-spin w-[76.73px] h-[27px] h-5 w-5 text-white"
@@ -331,7 +335,7 @@
               "Team name must only contain: letters, numbers and spaces"
             )
             .min(5)
-            .max(30),
+            .max(20),
       }),
     fillTeam: yup.bool().when("createTeam", {
       is: true,
@@ -366,7 +370,7 @@
 
   const invalidTeamCode = () => {
     alert("Something went wrong, please try again!");
-  }
+  };
 
   const register = () => {
     if (errors.value.length != 0) return;

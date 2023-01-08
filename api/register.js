@@ -69,14 +69,13 @@ async function createTeam(teamName, creatorName, db) {
   let code = "";
 
   while (duplicate != null) {
-      code = Math.floor(Math.random() * 1_0000_0000).toString().padStart(8, "0");
-      code = code.slice(0, 4) + "-" + code.slice(4, 8);
+    code = Math.floor(Math.random() * 1_0000_0000)
+      .toString()
+      .padStart(8, "0");
+    code = code.slice(0, 4) + "-" + code.slice(4, 8);
 
-      duplicate = await db
-        .collection("teams")
-        .findOne({ code: code });
+    duplicate = await db.collection("teams").findOne({ code: code });
   }
-
 
   const doc = {
     name: teamName,
@@ -138,7 +137,12 @@ export default async function handler(request, response) {
   await collection.insertOne(doc);
 
   if (teamCode != null)
-      await sendEmail(form.email, "Team Name: " + form.teamName, "Invite Code: " + teamCode, "Registration Info");
+    await sendEmail(
+      form.email,
+      "Team Name: " + form.teamName,
+      "Invite Code: " + teamCode,
+      "Registration Info"
+    );
   else await sendEmail(form.email, " ", " ", " ");
 
   response.status(200).json({
@@ -149,7 +153,8 @@ export default async function handler(request, response) {
 
 async function sendEmail(recipientEmail, team, code, registrationInfo) {
   let senderEmail = process.env.EMAIL_USER;
-  let messageText = "hank you for registering for Hack PNW! We have successfully received your registration and cannot wait to see you there! Be sure to keep an eye on your email as we will be sending out important updates about the event to you!";
+  let messageText =
+    "hank you for registering for Hack PNW! We have successfully received your registration and cannot wait to see you there! Be sure to keep an eye on your email as we will be sending out important updates about the event to you!";
   let messageHTML = `<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <!--[if gte mso 9]>
