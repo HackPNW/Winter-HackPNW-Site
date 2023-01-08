@@ -47,7 +47,7 @@
 
     <content-card title="Details!" color="cyan-500" class="lg:border-l-4">
       <p class="text-lg px-2 my-4 font-semibold">
-        When: Febuary 4th-5th <br />
+        When: Febuary 4th-5th, 9am-7pm and 9am-6pm <br />
         Where: 3709 157th Ave NE, Redmond, WA 98052 <br />
         Who can register: Any highschool student <br />
         Why: It's fun!

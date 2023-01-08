@@ -27,7 +27,7 @@ const faqs = [
   ],
   [
     "How long is HackPNW?",
-    "HackPNW is a 24 hour hackathon starting in the morning of saturday stopping during the night and then going all the way to sunday evening!",
+    "HackPNW is a 24 hour hackathon starting at 9am on saturday stopping at 7pm during the night and then starting again at 9am and ending at 6pm on sunday",
   ],
   [
     "How big is HackPNW?",
@@ -35,7 +35,7 @@ const faqs = [
   ],
   [
     "When is HackPNW?",
-    "HackPNW is going to be on Febuary 4th - Febuary 5th, at the Microsoft Redmond Reactor!",
+    "HackPNW is going to be on Febuary 4th - Febuary 5th from 9am-7pm and 9am-6pm respectively, at the Microsoft Redmond Reactor!",
   ],
   [
     "Will there be tech talks and workshops?",
