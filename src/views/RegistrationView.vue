@@ -383,7 +383,8 @@
     });
   };
 
-  const invalidTeamCode = () => {
+  const registrationError = () => {
+    isSubmitting.value = false;
     alert("Something went wrong, please try again!");
   };
 
@@ -397,7 +398,7 @@
       axios
         .post("/api/register", data)
         .then((res) => handleRegistered(res, data))
-        .catch(invalidTeamCode);
+        .catch(registrationError);
     })();
 
     router.push("/register");
