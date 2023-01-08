@@ -10,7 +10,7 @@
     "prettier": "prettier --write \"**/*.{vue,js,ts,json}\""
   },
   "dependencies": {
-    "@sexnine/cfturnstile-vue3": "^1.0.0",
+    "@sexnine/cfturnstile-vue3": "^1.0.2",
     "@vueuse/core": "^9.2.0",
     "axios": "^1.2.2",
     "cf-turnstile": "^1.0.8",
