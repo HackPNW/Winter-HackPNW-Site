@@ -2,6 +2,9 @@ const yup = require("yup");
 const _ = require("lodash");
 const { MongoClient } = require("mongodb");
 const nodemailer = require("nodemailer");
+const Turnstile = require("cf-turnstile");
+
+const turnstile = Turnstile(process.env.TURNSTILE_KEY);
 
 const url = process.env.MONGO_URL;
 const client = new MongoClient(url);
@@ -96,6 +99,16 @@ export default async function handler(request, response) {
   // Checks
   let form = request.body;
   console.log(form);
+
+  const turnstileResult = await turnstile(form.tsToken, {
+    remoteip: request.headers["x-forwarded-for"],
+  });
+  if (!turnstileResult.success) {
+    return response
+      .status(400)
+      .send("Invalid token.\nPlease try submitting again.");
+  }
+
   try {
     form = await formSchema.validate(form);
   } catch (e) {

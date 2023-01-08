@@ -10,8 +10,10 @@
     "prettier": "prettier --write \"**/*.{vue,js,ts,json}\""
   },
   "dependencies": {
+    "@sexnine/cfturnstile-vue3": "^1.0.0",
     "@vueuse/core": "^9.2.0",
     "axios": "^1.2.2",
+    "cf-turnstile": "^1.0.8",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "mongodb": "^4.10.0",

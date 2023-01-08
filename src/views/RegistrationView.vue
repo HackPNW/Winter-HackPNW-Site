@@ -174,6 +174,15 @@
         @click="formData.fillTeam = false"
         v-if="formData.createTeam" />
 
+      <div class="flex justify-center">
+        <div class="bg-white p-2 rounded-md w-min">
+          <Turnstile
+            sitekey="0x4AAAAAAAB5JuVXNILQBE2m"
+            :options="{ theme: 'light' }"
+            @verify="turnstileVerified" />
+        </div>
+      </div>
+
       <!-- END FORM -->
       <div
         class="ring-2 rounded-md px-2 text-gray-700 font-semibold mt-8"
@@ -240,6 +249,7 @@
   import SelectionFormInput from "../components/SelectionFormInput.vue";
   import FormCheckbox from "../components/FormCheckbox.vue";
   import { useForm } from "vee-validate";
+  import Turnstile from "@sexnine/cfturnstile-vue3";
   import * as yup from "yup"; // TODO: Optimize yup import
   import axios from "axios";
 
@@ -258,6 +268,10 @@
 
   const colorOptions = ["red", "amber", "green", "cyan", "violet", "pink"];
   const gradeOptions = ["9", "10", "11", "12"];
+
+  const turnstileVerified = (token) => {
+    formData.tsToken = token;
+  };
 
   const setFavouriteColor = (color) => (formData.color = color);
 
@@ -291,6 +305,7 @@
     teamName: "",
     fillTeam: true,
     restrictions: "",
+    tsToken: "",
   };
 
   const formSchema = yup.object({
