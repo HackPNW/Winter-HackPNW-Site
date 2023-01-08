@@ -79,7 +79,7 @@ async function createTeam(teamName, creatorName, db) {
 
   const doc = {
     name: teamName,
-    creatorName: creatorName,
+    userid: creatorName,
     code,
   };
 
