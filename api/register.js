@@ -134,7 +134,12 @@ export default async function handler(request, response) {
 
   let teamCode = null;
   if (form.createTeam) {
-    const teamDoc = await createTeam(form.teamName, form.firstName + " " + form.lastName, form.fillTeam, db);
+    const teamDoc = await createTeam(
+      form.teamName,
+      form.firstName + " " + form.lastName,
+      form.fillTeam,
+      db
+    );
     console.log(teamDoc);
     doc.teamId = teamDoc._id;
     teamCode = teamDoc.code;
@@ -145,7 +150,12 @@ export default async function handler(request, response) {
     if (!teamDoc) return response.status(400).send("Not valid team code");
     doc.teamId = teamDoc._id;
 
-    const sizeOfTeam = (await db.collection("registrations").find({ teamId: doc.teamId }).toArray()).length;
+    const sizeOfTeam = (
+      await db
+        .collection("registrations")
+        .find({ teamId: doc.teamId })
+        .toArray()
+    ).length;
 
     if (sizeOfTeam >= 4) return response.status(400).send("Team is full");
   } else {
