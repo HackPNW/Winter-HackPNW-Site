@@ -161,9 +161,9 @@ export default async function handler(request, response) {
 
   console.log(doc);
 
-  await db
-    .collection("teams")
-    .updateOne({ _id: doc.teamId }, { creatorId: doc._id });
+  // await db
+  //   .collection("teams")
+  //   .updateOne({ _id: doc.teamId }, { creatorId: doc._id });
 
   if (teamCode != null)
     await sendEmail(
