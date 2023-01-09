@@ -158,6 +158,9 @@ export default async function handler(request, response) {
   }
 
   await collection.insertOne(doc);
+
+  console.log(doc);
+
   await db
     .collection("teams")
     .updateOne({ _id: doc.teamId }, { creatorId: doc._id });
