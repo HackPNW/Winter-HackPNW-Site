@@ -4,7 +4,7 @@
     <summary
       @click="isActive = !isActive"
       :class="{ 'rounded-t-xl': isActive, 'rounded-xl': !isActive }"
-      class="bg-[#238fa0] justify-between flex text-xl text-white font-bold py-4 px-4">
+      class="bg-[#28baa9] justify-between flex text-xl text-white font-bold py-4 px-4">
       {{ question }}
       <svg
         :class="{ 'rotate-180': isActive }"

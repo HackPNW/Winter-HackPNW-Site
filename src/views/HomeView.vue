@@ -34,9 +34,114 @@
       <row-of-content-cards />
     </div>
 
+      <div id="schedule" class="p-8">
+        <div>
+          <h2
+            class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-[#238fa0] decoration-8 underline-offset-8">
+            Schedule
+          </h2>
+        </div>
+         <div class="flex flex-1 space-x-6 flex-col sm:flex-row md:space-y-0 space-y-4">
+          <div class="shadow-xl rounded-md card flex-grow pb-4">
+            <h1 class="text-center text-white font-bold text-4xl py-2">Saturday</h1>
+             <div class="flex flex-1 flex-col lg:flex-row">
+              <div class="flex-grow">
+                <schedule-cell
+                  time-start="9:00am"
+                  time-end="9:30am"
+                  name="Check In"
+                  more-info="It's a thing"
+
+                />
+                <schedule-cell
+                  time-start="9:30am"
+                  time-end="9:40am"
+                  name="Opening Ceremony"
+                  more-info="It's a thing"
+                />
+                <schedule-cell
+              time-start="1:00pm"
+              time-end="2:00pm"
+              name="Lunch"
+              more-info="It's a thing"
+            />
+              </div>
+           <div class="flex-grow">
+
+            <schedule-cell
+              time-start="2:30pm"
+              time-end="3:15pm"
+              name="Design Challenge"
+              more-info="It's a thing"
+            />
+            <schedule-cell
+              time-start="3:30pm"
+              time-end="4:00pm"
+              name="Twillio Workshop"
+              more-info="It's a thing"
+            />
+            <schedule-cell
+              time-start="6:50pm"
+              time-end="7:00pm"
+              name="Closing Remarks"
+              more-info="It's a thing"
+            />
+            </div>
+           </div>
+          </div>
+          <div class="shadow-xl rounded-md card flex-grow pb-4">
+            <h1 class="text-center text-white font-bold text-4xl py-2">Sunday</h1>
+             <div class="flex flex-1 flex-col lg:flex-row">
+              <div class="flex-grow">
+                <schedule-cell
+                  time-start="9:00am"
+                  time-end="9:30am"
+                  name="Check In"
+                  more-info="It's a thing"
+
+                />
+                <schedule-cell
+                  time-start="9:30am"
+                  time-end="9:40am"
+                  name="Opening Remarks"
+                  more-info="It's a thing"
+                />
+            <schedule-cell
+              time-start="1:00pm"
+              time-end="2:00pm"
+              name="Lunch"
+              more-info="It's a thing"
+            />
+              </div>
+           <div class="flex-grow">
+            <schedule-cell
+              time-start="2:30pm"
+              time-end="3:15am"
+              name="Design Challenge"
+              more-info="It's a thing"
+            />
+            <schedule-cell
+              time-start="1:00pm"
+              time-end="2:00pm"
+              name="Submission/Judging"
+              more-info="It's a thing"
+            />
+            <schedule-cell
+              time-start="5:30pm"
+              time-end="6:00pm"
+              name="Closing Ceremony"
+              more-info="It's a thing"
+            />
+            </div>
+           </div>
+
+          </div>
+         </div>
+      </div>
+
     <div id="faq" class="p-8">
       <h2
-        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-[#238fa0] decoration-8 underline-offset-8">
+        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-[#28baa9] decoration-8 underline-offset-8">
         Frequently Asked Questions
       </h2>
 
@@ -49,22 +154,34 @@
     </div>
     <div id="sponsors">
       <h2
-        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-[#28baa9] decoration-8 underline-offset-8">
+        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-cyan-500 decoration-8 underline-offset-8">
         Sponsors
       </h2>
 
       <div class="flex flex-col lg:flex-row gap-x-2 mb-4">
         <div
           class="flex flex-1 gap-y-2 mb-2 p-4 gap-x-24 items-center justify-center flex-col lg:flex-row">
-          <sponsor-card text="This could be you!" />
-          <sponsor-card text="This could be you!" />
-          <sponsor-card text="This could be you!" />
+            <sponsor-card text="../assets/StickerGiant.png" :isImg="true">
+              <img src="../assets/StickerGiant.png" />
+            </sponsor-card>
+          <sponsor-card text="This could be you!" :isImg="false"/>
+          <sponsor-card text="This could be you!" :isImg="false"/>
         </div>
       </div>
     </div>
     <based-footer />
   </div>
 </template>
+
+<style scoped>
+  .card {
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background-color: rgba(17, 25, 40, 0.3);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+</style>
 
 <script setup>
   // import { ref, computed, watch, onMounted } from "vue";
@@ -77,6 +194,7 @@
   import { getFaqColumns } from "../faqs";
   import { ref } from "vue";
   import SponsorCard from "../components/SponsorCard.vue";
+  import ScheduleCell from "../components/ScheduleCell.vue";
 
   const router = useRouter();
 
