@@ -14,11 +14,8 @@ export default async function handler(request, response) {
   const teamCollection = await db.collection("teams").countDocuments();
   const registrationsCollection = await db.collection("registrations").countDocuments();
 
-  const teams = await db.collection("teams");
-
   return response.status(200).json({
     numberOfRegistrations: registrationsCollection,
     numberOfTeams: teamCollection,
-    teams: teams
   });
 }
