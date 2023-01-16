@@ -115,9 +115,9 @@
               </div>
            <div class="flex-grow">
             <schedule-cell
-              time-start="2:30pm"
-              time-end="3:15am"
-              name="Design Challenge"
+              time-start="1:30pm"
+              time-end="2:00pm"
+              name="Trivia Challenge"
               more-info="It's a thing"
             />
             <schedule-cell
