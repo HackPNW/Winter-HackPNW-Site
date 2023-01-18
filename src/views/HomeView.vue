@@ -164,7 +164,9 @@
             <sponsor-card text="../assets/StickerGiant.png" :isImg="true">
               <img src="../assets/StickerGiant.png" />
             </sponsor-card>
-          <sponsor-card text="This could be you!" :isImg="false"/>
+          <sponsor-card text="This could be you!" :isImg="true">
+            <img src="../assets/BellCollection.svg" />
+          </sponsor-card>
           <sponsor-card text="This could be you!" :isImg="false"/>
         </div>
       </div>
