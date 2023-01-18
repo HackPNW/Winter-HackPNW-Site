@@ -121,13 +121,13 @@
               more-info="It's a thing"
             />
             <schedule-cell
-              time-start="1:00pm"
-              time-end="2:00pm"
+              time-start="5:00pm"
+              time-end="5:40pm"
               name="Submission/Judging"
               more-info="It's a thing"
             />
             <schedule-cell
-              time-start="5:30pm"
+              time-start="5:40pm"
               time-end="6:00pm"
               name="Closing Ceremony"
               more-info="It's a thing"
