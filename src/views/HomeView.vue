@@ -152,12 +152,37 @@
             <img src="../assets/StickerGiant.png" />
           </sponsor-card>
           <sponsor-card text="This could be you!" :isImg="true">
-            <img src="../assets/BellCollection.svg" />
+            <a href="https://bellevuecollection.com/"><img src="../assets/BellCollection.svg" /></a>
           </sponsor-card>
           <sponsor-card text="This could be you!" :isImg="false" />
         </div>
       </div>
     </div>
+
+    <div id="team">
+      <h2
+        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-emerald-500 decoration-8 underline-offset-8">
+        Meet the Team
+      </h2>
+
+      <div class="flex flex-1 flex-col space-y-4 p-8">
+        <div class="flex space-x-4 flex-1 md:flex-row flex-col">
+          <team-card name="Ted Guan" title="Co-Founder • Director" school="Bellevue International" aboutme="I'm a Junior at Bellevue International School!" color="sky-500" />
+          <team-card name="Will McDonald" title="Co-Founder • Lead Organizer" school="Bellevue International" aboutme="I'm a Junior at Bellevue International School!" color="emerald-500" />
+          <team-card name="Joseph Lyons" title="Lead Developer" aboutme="Aussie" color="amber-500" />
+        </div>
+        <div class="flex space-x-4 md:flex-row flex-col">
+          <team-card name="Alex DeForrest" title="Lead Organizer" aboutme="Hacker at Puyallup High School" color="violet-500" />
+          <team-card name="Keira Wong" title="Co-Founder • Lead Organizer" school="Bellevue International" aboutme="I'm a Senior at Bellevue International School!" color="cyan-600" />
+          <team-card name="Bhavya Rajput" title="Media Manager" aboutme="" color="orange-500" />
+        </div>
+        <div class="flex space-x-4 md:flex-row flex-col">
+          <team-card name="Kaitlin Nguyen" title="" aboutme="" color="fuchsia-500" />
+          <team-card name="Hana Smahi" title="Organizer" school="Bellevue International" aboutme="I'm a Senior at Bellevue International School!" color="cyan-600" />
+        </div>
+      </div>
+    </div>
+
     <based-footer />
   </div>
 </template>
@@ -184,6 +209,7 @@
   import { ref } from "vue";
   import SponsorCard from "../components/SponsorCard.vue";
   import ScheduleCell from "../components/ScheduleCell.vue";
+  import TeamCard from "../components/TeamCard.vue"
 
   const router = useRouter();
 
@@ -194,11 +220,4 @@
   };
 
   const shouldRotate = ref(false);
-
-  const rotateOrca = () => {
-    shouldRotate.value = false;
-    shouldRotate.value = true;
-  };
-
-  const expandOrca = () => {};
 </script>
