@@ -7,7 +7,8 @@
     "build": "vite-ssg build",
     "build-csr": "vite build",
     "preview": "vite preview",
-    "prettier": "prettier --write \"**/*.{vue,js,ts,json}\""
+    "prettier": "prettier --write \"**/*.{vue,js,ts,json}\"",
+    "vercel-dev": "vercel dev"
   },
   "dependencies": {
     "@sexnine/cfturnstile-vue3": "^1.0.2",
