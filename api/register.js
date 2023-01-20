@@ -132,6 +132,10 @@ export default async function handler(request, response) {
     "restrictions",
   ]);
 
+  if (form.createTeam || !form.hasTeamCode) {
+    return response.status(400).send("Unable to sign up without team code");
+  }
+
   let teamCode = null;
   if (form.createTeam) {
     const teamDoc = await createTeam(form.teamName, null, form.fillTeam, db);
@@ -161,9 +165,13 @@ export default async function handler(request, response) {
 
   console.log(doc);
 
-  // await db
-  //   .collection("teams")
-  //   .updateOne({ _id: doc.teamId }, { creatorId: doc._id });
+  // try {
+  //   await db
+  //     .collection("teams")
+  //     .updateOne({ _id: doc.teamId }, { creatorId: doc._id });
+  // } catch (e) {
+  //   console.log(e);
+  // }
 
   if (teamCode != null)
     await sendEmail(

@@ -1,7 +1,5 @@
 <template>
-    <h1>To Do</h1>
+  <h1>To Do</h1>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
