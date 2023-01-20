@@ -149,7 +149,7 @@
         <div
           class="flex flex-1 gap-y-2 mb-2 p-4 gap-x-24 items-center justify-center flex-col lg:flex-row">
           <sponsor-card text="../assets/StickerGiant.png" :isImg="true">
-            <img src="../assets/StickerGiant.png" />
+            <img class="p-3" src="../assets/StickerGiant.png" />
           </sponsor-card>
           <sponsor-card text="This could be you!" :isImg="true">
             <a href="https://bellevuecollection.com/"><img src="../assets/BellCollection.svg" /></a>
