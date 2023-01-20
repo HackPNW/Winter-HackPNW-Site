@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-300 w-fit rounded-lg flex flex-grow">
+  <div class="bg-slate-300 w-full rounded-lg flex">
 <!--    <div class="bg-emerald-500 w-4 rounded-l-lg" />-->
     <div class="space-y-1 w-full">
       <div class="">

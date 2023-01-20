@@ -24,6 +24,8 @@
     </h1>
     <div class="flex flex-col mt-12 w-full max-w-xl gap-y-4 p-6">
       <!-- START FORM -->
+      <div class="ring-2 rounded-md px-2 text-gray-700 font-semibold mt-8 bg-amber-200">Hey there, unfortunately due to reaching capacity limits, only those who have been invited to join an existing team are able to sign up.
+If you do not have a team code you are no longer able to sign up for HackPNW. If you would like to stay up to date with future hackathons join our mailing like <a @click="goToMailingList" class="cursor-pointer hover:bg-gray-300 bg-gray-200 rounded-md px-1 text-sky-500">here</a></div>
 
       <div
         v-if="beenInvited"
@@ -96,40 +98,40 @@
           @click="setFavouriteColor(color)" />
       </div>
 
-      <div
-        class="flex justify-between px-1 py-1 rounded-md items-center mt-8"
-        v-if="!beenInvited">
-        <button
-          class="text-xl font-semibold px-2 py-1 rounded-md transition"
-          :class="
-            formData.createTeam ? '' : 'bg-[#238fa0] text-white shadow-lg'
-          "
-          @click="formData.createTeam = false">
-          Join a team
-        </button>
-        <p class="text-gray-600">or</p>
-        <button
-          class="text-xl font-semibold px-2 py-1 rounded-md transition"
-          :class="
-            formData.createTeam ? 'bg-[#238fa0] text-white shadow-lg' : ''
-          "
-          @click="formData.createTeam = true">
-          Create a team
-        </button>
-      </div>
+<!--      <div-->
+<!--        class="flex justify-between px-1 py-1 rounded-md items-center mt-8"-->
+<!--        v-if="!beenInvited">-->
+<!--        <button-->
+<!--          class="text-xl font-semibold px-2 py-1 rounded-md transition"-->
+<!--          :class="-->
+<!--            formData.createTeam ? '' : 'bg-[#238fa0] text-white shadow-lg'-->
+<!--          "-->
+<!--          @click="formData.createTeam = false">-->
+<!--          Join a team-->
+<!--        </button>-->
+<!--        <p class="text-gray-600">or</p>-->
+<!--        <button-->
+<!--          class="text-xl font-semibold px-2 py-1 rounded-md transition"-->
+<!--          :class="-->
+<!--            formData.createTeam ? 'bg-[#238fa0] text-white shadow-lg' : ''-->
+<!--          "-->
+<!--          @click="formData.createTeam = true">-->
+<!--          Create a team-->
+<!--        </button>-->
+<!--      </div>-->
 
       <!-- JOIN TEAM -->
 
-      <form-checkbox
-        text="I have a team and the team code"
-        :checked="formData.hasTeamCode"
-        @click="formData.hasTeamCode = true"
-        v-if="!formData.createTeam && !beenInvited" />
-      <form-checkbox
-        text="I do not have a team, please put me in one"
-        :checked="!formData.hasTeamCode"
-        @click="formData.hasTeamCode = false"
-        v-if="!formData.createTeam && !beenInvited" />
+<!--      <form-checkbox-->
+<!--        text="I have a team and the team code"-->
+<!--        :checked="formData.hasTeamCode"-->
+<!--        @click="formData.hasTeamCode = true"-->
+<!--        v-if="!formData.createTeam && !beenInvited" />-->
+<!--      <form-checkbox-->
+<!--        text="I do not have a team, please put me in one"-->
+<!--        :checked="!formData.hasTeamCode"-->
+<!--        @click="formData.hasTeamCode = false"-->
+<!--        v-if="!formData.createTeam && !beenInvited" />-->
 
       <form-input
         text="Team code*"
@@ -375,6 +377,10 @@
   const goToHome = () => {
     router.push("/");
   };
+
+  const goToMailingList = () => {
+    router.push("/mailing")
+  }
 
   const handleRegistered = (res, data) => {
     router.push({

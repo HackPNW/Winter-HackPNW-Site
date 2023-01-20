@@ -164,21 +164,15 @@
 <!--        Meet the Team-->
 <!--      </h2>-->
 
-<!--      <div class="flex flex-1 flex-col space-y-4 p-8">-->
-<!--        <div class="flex space-x-4 flex-1 md:flex-row flex-col">-->
+<!--      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 ">-->
 <!--          <team-card name="Ted Guan" title="Co-Founder • Director" school="Bellevue International" aboutme="I'm a Junior at Bellevue International School!" color="sky-500" />-->
 <!--          <team-card name="Will McDonald" title="Co-Founder • Lead Organizer" school="Bellevue International" aboutme="I'm a Junior at Bellevue International School!" color="emerald-500" />-->
-<!--          <team-card name="Joseph Lyons" title="Lead Developer" aboutme="Aussie" color="amber-500" />-->
-<!--        </div>-->
-<!--        <div class="flex space-x-4 md:flex-row flex-col">-->
+<!--          <team-card name="Joseph Lyons" title="Lead Developer" aboutme="A 17 year-old full-stack web dev from Australia, self-taught developer fueled by absurd amounts of caffeine.  Aside from the usual nerd stuff like programming and system admin I also enjoy cooking and managing programming-related online spaces for teens." color="amber-500" />-->
 <!--          <team-card name="Alex DeForrest" title="Lead Organizer" aboutme="Hacker at Puyallup High School" color="violet-500" />-->
-<!--          <team-card name="Keira Wong" title="Co-Founder • Lead Organizer" school="Bellevue International" aboutme="I'm a Senior at Bellevue International School!" color="cyan-600" />-->
+<!--          <team-card name="Keira Wong" title="Co-Founder • Lead Organizer" school="Bellevue International" aboutme="I'm a Senior at Bellevue International School!" color="indigo-500" />-->
 <!--          <team-card name="Bhavya Rajput" title="Media Manager" aboutme="" color="orange-500" />-->
-<!--        </div>-->
-<!--        <div class="flex space-x-4 md:flex-row flex-col">-->
 <!--          <team-card name="Kaitlin Nguyen" title="" aboutme="" color="fuchsia-500" />-->
 <!--          <team-card name="Hana Smahi" title="Organizer" school="Bellevue International" aboutme="I'm a Senior at Bellevue International School!" color="cyan-600" />-->
-<!--        </div>-->
 <!--      </div>-->
 <!--    </div>-->
 

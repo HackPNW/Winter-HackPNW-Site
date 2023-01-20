@@ -2,6 +2,7 @@ import HomeView from "./views/HomeView.vue";
 import RegistrationView from "./views/RegistrationView.vue";
 import ContactUsView from "./views/ContactUsView.vue";
 import RegistrationCompleteView from "./views/RegistrationCompleteView.vue";
+import EmailListView from "./views/EmailListView.vue";
 
 const routes = [
   {
@@ -26,6 +27,12 @@ const routes = [
     path: "/contact",
     name: "contact",
     component: ContactUsView,
+    meta: { transition: "slide-right" },
+  },
+  {
+    path: "/mailing",
+    name: "mailing",
+    component: EmailListView,
     meta: { transition: "slide-right" },
   },
 ];
