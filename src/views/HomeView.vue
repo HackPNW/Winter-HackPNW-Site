@@ -156,29 +156,31 @@
             <img class="p-3" src="../assets/StickerGiant.png" />
           </sponsor-card>
           <sponsor-card text="This could be you!" :isImg="true">
-            <a href="https://bellevuecollection.com/"><img src="../assets/BellCollection.svg" /></a>
+            <a href="https://bellevuecollection.com/"
+              ><img src="../assets/BellCollection.svg"
+            /></a>
           </sponsor-card>
         </div>
       </div>
     </div>
 
-<!--    <div id="team">-->
-<!--      <h2-->
-<!--        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-emerald-500 decoration-8 underline-offset-8">-->
-<!--        Meet the Team-->
-<!--      </h2>-->
+    <!--    <div id="team">-->
+    <!--      <h2-->
+    <!--        class="text-center text-6xl font-bold pb-6 pt-4 my-5 underline decoration-emerald-500 decoration-8 underline-offset-8">-->
+    <!--        Meet the Team-->
+    <!--      </h2>-->
 
-<!--      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 ">-->
-<!--          <team-card name="Ted Guan" title="Co-Founder • Director" school="Bellevue International" aboutme="I'm a Junior at Bellevue International School!" color="sky-500" />-->
-<!--          <team-card name="Will McDonald" title="Co-Founder • Lead Organizer" school="Bellevue International" aboutme="I'm a Junior at Bellevue International School!" color="emerald-500" />-->
-<!--          <team-card name="Joseph Lyons" title="Lead Developer" aboutme="A 17 year-old full-stack web dev from Australia, self-taught developer fueled by absurd amounts of caffeine.  Aside from the usual nerd stuff like programming and system admin I also enjoy cooking and managing programming-related online spaces for teens." color="amber-500" />-->
-<!--          <team-card name="Alex DeForrest" title="Lead Organizer" aboutme="Hacker at Puyallup High School" color="violet-500" />-->
-<!--          <team-card name="Keira Wong" title="Co-Founder • Lead Organizer" school="Bellevue International" aboutme="I'm a Senior at Bellevue International School!" color="indigo-500" />-->
-<!--          <team-card name="Bhavya Rajput" title="Media Manager" aboutme="" color="orange-500" />-->
-<!--          <team-card name="Kaitlin Nguyen" title="" aboutme="" color="fuchsia-500" />-->
-<!--          <team-card name="Hana Smahi" title="Organizer" school="Bellevue International" aboutme="I'm a Senior at Bellevue International School!" color="cyan-600" />-->
-<!--      </div>-->
-<!--    </div>-->
+    <!--      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8 ">-->
+    <!--          <team-card name="Ted Guan" title="Co-Founder • Director" school="Bellevue International" aboutme="I'm a Junior at Bellevue International School!" color="sky-500" />-->
+    <!--          <team-card name="Will McDonald" title="Co-Founder • Lead Organizer" school="Bellevue International" aboutme="I'm a Junior at Bellevue International School!" color="emerald-500" />-->
+    <!--          <team-card name="Joseph Lyons" title="Lead Developer" aboutme="A 17 year-old full-stack web dev from Australia, self-taught developer fueled by absurd amounts of caffeine.  Aside from the usual nerd stuff like programming and system admin I also enjoy cooking and managing programming-related online spaces for teens." color="amber-500" />-->
+    <!--          <team-card name="Alex DeForrest" title="Lead Organizer" aboutme="Hacker at Puyallup High School" color="violet-500" />-->
+    <!--          <team-card name="Keira Wong" title="Co-Founder • Lead Organizer" school="Bellevue International" aboutme="I'm a Senior at Bellevue International School!" color="indigo-500" />-->
+    <!--          <team-card name="Bhavya Rajput" title="Media Manager" aboutme="" color="orange-500" />-->
+    <!--          <team-card name="Kaitlin Nguyen" title="" aboutme="" color="fuchsia-500" />-->
+    <!--          <team-card name="Hana Smahi" title="Organizer" school="Bellevue International" aboutme="I'm a Senior at Bellevue International School!" color="cyan-600" />-->
+    <!--      </div>-->
+    <!--    </div>-->
 
     <based-footer />
   </div>
@@ -206,7 +208,7 @@
   import { ref } from "vue";
   import SponsorCard from "../components/SponsorCard.vue";
   import ScheduleCell from "../components/ScheduleCell.vue";
-  import TeamCard from "../components/TeamCard.vue"
+  import TeamCard from "../components/TeamCard.vue";
 
   const router = useRouter();
 

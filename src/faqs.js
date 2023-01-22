@@ -3,7 +3,10 @@ const faqs = [
     "What is a Hackathon?",
     "A hackathon is a sprint-like design event wherein computer programmers and others involved in software development, including graphic designers, interface designers, product managers, project managers, domain experts, and others collaborate intensively on software projects. The goal of a hackathon is to create functioning software or hardware by the end of the event. Hackathons tend to have a specific focus, which can include the programming language used, the operating system, an application, an API, or the subject and the demographic group of the programmers. In other cases, there is no restriction on the type of software being created or the design of the new system. ",
   ],
-  ["How much does it cost?", "Nothing! HackPNW is 100% free: there will be free drinks, snacks, and lunch provided for both days. Ensure that you eat a good breakfast before coming."],
+  [
+    "How much does it cost?",
+    "Nothing! HackPNW is 100% free: there will be free drinks, snacks, and lunch provided for both days. Ensure that you eat a good breakfast before coming.",
+  ],
   [
     "Who can register?",
     "Any highschool student can register as a solo or as a team!",
@@ -18,7 +21,7 @@ const faqs = [
   ],
   [
     "Will there be prizes?",
-    "Of course! There will be three award catagories: Best Overall, Best Design, and Best Functionality. For best overall there's a $100 prize pool, and $50 for both design and functionality. Of course there will be swag for all participants from companies like Microsoft, Github, and Twillio."
+    "Of course! There will be three award catagories: Best Overall, Best Design, and Best Functionality. For best overall there's a $100 prize pool, and $50 for both design and functionality. Of course there will be swag for all participants from companies like Microsoft, Github, and Twillio.",
   ],
   [
     "Will there be mentors?",
