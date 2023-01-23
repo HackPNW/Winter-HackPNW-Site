@@ -150,10 +150,14 @@
         <div
           class="flex flex-1 gap-y-2 mb-2 p-4 gap-x-24 items-center justify-center flex-col lg:flex-row">
           <sponsor-card text="CloudClassroom" :isImg="true">
-            <img class="p-3" src="../assets/CloudClassroom.png" />
+            <a href="https://www.thecloudclassroom.org/"
+              ><img class="p-3" src="../assets/CloudClassroom.png" />
+            </a>
           </sponsor-card>
           <sponsor-card text="../assets/StickerGiant.png" :isImg="true">
-            <img class="p-3" src="../assets/StickerGiant.png" />
+            <a href="https://www.stickergiant.com/"
+              ><img class="p-3" src="../assets/StickerGiant.png" />
+            </a>
           </sponsor-card>
           <sponsor-card text="This could be you!" :isImg="true">
             <a href="https://bellevuecollection.com/"
