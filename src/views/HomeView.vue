@@ -149,9 +149,9 @@
 
         <div
           class="flex flex-1 gap-y-2 mb-2 p-4 gap-x-24 items-center justify-center flex-col lg:flex-row">
-<!--          <sponsor-card text="CloudClassroom" :isImg="true">-->
-<!--            <img class="p-3" src="../assets/CloudClassroom.png" />-->
-<!--          </sponsor-card>-->
+          <sponsor-card text="CloudClassroom" :isImg="true">
+            <img class="p-3" src="../assets/CloudClassroom.png" />
+          </sponsor-card>
           <sponsor-card text="../assets/StickerGiant.png" :isImg="true">
             <img class="p-3" src="../assets/StickerGiant.png" />
           </sponsor-card>
