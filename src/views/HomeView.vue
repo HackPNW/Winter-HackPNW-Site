@@ -69,7 +69,7 @@
               <schedule-cell
                 time-start="2:30pm"
                 time-end="3:15pm"
-                name="Design Challenge"
+                name="Team Challenge"
                 more-info="It's a thing" />
               <schedule-cell
                 time-start="3:30pm"
